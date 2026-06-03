@@ -40,6 +40,34 @@
   --radius-xs: 6px;
   --mono: 'JetBrains Mono', monospace;
 }
+/* ── LIGHT MODE ── */
+body.light {
+  --bg:        #F4F4F6;
+  --bg2:       #EAEAEF;
+  --bg3:       #E0E0E8;
+  --surface:   #FFFFFF;
+  --surface2:  #F0F0F5;
+  --surface3:  #E4E4EC;
+  --border:    rgba(0,0,0,0.07);
+  --border2:   rgba(0,0,0,0.13);
+  --ink:       #111114;
+  --ink2:      #555562;
+  --ink3:      #9090A0;
+  --green-dim: rgba(34,197,94,0.10);
+  --red-dim:   rgba(239,68,68,0.10);
+  --amber-dim: rgba(245,158,11,0.10);
+  --blue-dim:  rgba(99,102,241,0.10);
+  --shadow:    0 4px 24px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 48px rgba(0,0,0,0.15);
+}
+body.light .net-card::before{background:radial-gradient(circle,rgba(124,58,237,0.06),transparent 70%);}
+/* theme toggle btn */
+.theme-toggle{
+  background:none;border:1px solid var(--border2);border-radius:20px;
+  padding:6px 10px;cursor:pointer;font-size:0.85rem;
+  color:var(--ink2);transition:all 0.15s;flex-shrink:0;
+}
+.theme-toggle:hover{background:var(--surface2);}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;font-size:15px;-webkit-font-smoothing:antialiased;}
 
@@ -874,6 +902,122 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink
   font-size:0.76rem;color:var(--ink3);line-height:1.6;margin-top:14px;
 }
 .info-pill strong{color:var(--ink2);}
+
+/* ── PIN LOCK SCREEN ── */
+#pinLock{
+  position:fixed;inset:0;z-index:9999;
+  background:var(--bg);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:0;
+}
+#pinLock.hidden{display:none;}
+.pin-logo{font-family:var(--mono);font-size:1.3rem;font-weight:700;margin-bottom:32px;display:flex;align-items:center;gap:10px;}
+.pin-logo-mark{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent2),var(--blue));display:flex;align-items:center;justify-content:center;font-size:1rem;color:white;font-weight:700;}
+.pin-title{font-size:0.95rem;font-weight:600;color:var(--ink2);margin-bottom:20px;}
+.pin-dots{display:flex;gap:14px;margin-bottom:28px;}
+.pin-dot{width:16px;height:16px;border-radius:50%;border:2px solid var(--border2);background:none;transition:all 0.15s;}
+.pin-dot.filled{background:var(--accent);border-color:var(--accent);}
+.pin-dot.error{background:var(--red);border-color:var(--red);}
+.pin-keypad{display:grid;grid-template-columns:repeat(3,72px);gap:10px;}
+.pin-key{
+  height:64px;border-radius:var(--radius-sm);border:1px solid var(--border2);
+  background:var(--surface);color:var(--ink);
+  font-family:'Space Grotesk',sans-serif;font-size:1.3rem;font-weight:600;
+  cursor:pointer;transition:all 0.12s;-webkit-tap-highlight-color:transparent;
+}
+.pin-key:hover{background:var(--surface2);}
+.pin-key:active{transform:scale(0.94);background:var(--surface3);}
+.pin-key.del{font-size:1rem;color:var(--ink2);}
+.pin-key.del:hover{color:var(--red);background:var(--red-dim);}
+.pin-error{color:var(--red);font-size:0.8rem;margin-top:12px;min-height:1.2em;}
+.pin-forgot{margin-top:18px;font-size:0.78rem;color:var(--ink3);cursor:pointer;text-decoration:underline;}
+.pin-forgot:hover{color:var(--ink2);}
+
+/* ── MULTI-BIZ MODAL ── */
+.biz-list{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
+.biz-list-item{
+  display:flex;align-items:center;gap:10px;
+  padding:10px 12px;border-radius:var(--radius-sm);
+  border:1px solid var(--border);background:var(--surface);
+  cursor:pointer;transition:all 0.12s;
+}
+.biz-list-item:hover{border-color:var(--border2);background:var(--surface2);}
+.biz-list-item.active-biz{border-color:var(--accent);background:var(--blue-dim);}
+.biz-list-icon{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--accent2),var(--blue));display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:white;font-weight:700;flex-shrink:0;}
+.biz-list-name{flex:1;font-weight:600;font-size:0.88rem;}
+.biz-list-del{background:none;border:none;color:var(--ink3);cursor:pointer;font-size:0.85rem;padding:4px 6px;border-radius:5px;}
+.biz-list-del:hover{color:var(--red);background:var(--red-dim);}
+.biz-new-row{display:flex;gap:8px;}
+.biz-new-input{flex:1;padding:10px 12px;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius-sm);color:var(--ink);font-family:'Space Grotesk',sans-serif;font-size:0.88rem;outline:none;}
+.biz-new-input:focus{border-color:var(--accent);}
+.biz-new-btn{padding:10px 16px;border:none;border-radius:var(--radius-sm);background:var(--accent);color:white;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.85rem;cursor:pointer;}
+.biz-new-btn:hover{background:var(--accent2);}
+.biz-section-label{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink3);font-weight:600;margin-bottom:8px;}
+
+/* ── EXPORT / IMPORT SETTINGS TAB ── */
+.settings-section{margin-bottom:20px;}
+.settings-title{font-weight:700;font-size:0.92rem;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.settings-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;}
+.settings-row{
+  display:flex;align-items:center;gap:12px;
+  padding:13px 14px;border-bottom:1px solid var(--border);
+}
+.settings-row:last-child{border-bottom:none;}
+.settings-row-icon{font-size:1.2rem;flex-shrink:0;}
+.settings-row-info{flex:1;}
+.settings-row-label{font-weight:600;font-size:0.87rem;}
+.settings-row-desc{font-size:0.72rem;color:var(--ink3);margin-top:2px;}
+.settings-btn{
+  padding:8px 14px;border:1px solid var(--border2);border-radius:var(--radius-xs);
+  background:var(--surface2);color:var(--ink);
+  font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:0.78rem;
+  cursor:pointer;transition:all 0.12s;white-space:nowrap;
+}
+.settings-btn:hover{background:var(--surface3);border-color:var(--accent);}
+.settings-btn.danger{color:var(--red);border-color:var(--red-mid);}
+.settings-btn.danger:hover{background:var(--red-dim);}
+.pin-setup-dots{display:flex;gap:10px;margin:10px 0;}
+.pin-setup-dot{width:12px;height:12px;border-radius:50%;border:2px solid var(--border2);background:none;transition:all 0.15s;}
+.pin-setup-dot.filled{background:var(--accent);border-color:var(--accent);}
+
+/* ── OCR RECEIPT MODAL ── */
+.ocr-dropzone{
+  border:2px dashed var(--border2);border-radius:var(--radius);
+  padding:28px 18px;text-align:center;cursor:pointer;
+  transition:all 0.15s;background:var(--bg3);
+}
+.ocr-dropzone:hover,.ocr-dropzone.dragover{border-color:var(--accent);background:var(--blue-dim);}
+.ocr-dropzone-icon{font-size:2rem;margin-bottom:8px;}
+.ocr-dropzone-label{font-size:0.85rem;color:var(--ink2);font-weight:500;}
+.ocr-dropzone-sub{font-size:0.72rem;color:var(--ink3);margin-top:4px;}
+.ocr-preview{max-width:100%;border-radius:var(--radius-sm);margin:10px 0;display:none;}
+.ocr-result-box{
+  background:var(--bg3);border:1px solid var(--border2);
+  border-radius:var(--radius-sm);padding:14px;margin-top:10px;display:none;
+}
+.ocr-result-title{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink3);font-weight:600;margin-bottom:10px;}
+.ocr-field-row{display:flex;flex-direction:column;gap:3px;margin-bottom:10px;}
+.ocr-field-label{font-size:0.71rem;color:var(--ink3);}
+.ocr-field-input{padding:8px 10px;background:var(--surface);border:1px solid var(--border2);border-radius:var(--radius-xs);color:var(--ink);font-family:'Space Grotesk',sans-serif;font-size:0.88rem;outline:none;}
+.ocr-field-input:focus{border-color:var(--accent);}
+.ocr-loading{text-align:center;padding:16px;color:var(--ink3);font-size:0.84rem;display:none;}
+.ocr-loading-spin{font-size:1.4rem;animation:spin 1s linear infinite;display:inline-block;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.ocr-add-btn{
+  width:100%;padding:12px;border:none;border-radius:var(--radius-sm);
+  background:var(--red);color:white;
+  font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.9rem;
+  cursor:pointer;margin-top:10px;display:none;transition:background 0.15s;
+}
+.ocr-add-btn:hover{background:#dc2626;}
+/* OCR quick trigger in quick-bar */
+.qb-ocr-btn{
+  padding:9px 14px;border:1px dashed var(--border2);border-radius:var(--radius-sm);
+  background:none;color:var(--ink3);font-family:'Space Grotesk',sans-serif;
+  font-size:0.78rem;font-weight:600;cursor:pointer;transition:all 0.15s;
+  display:flex;align-items:center;gap:6px;
+}
+.qb-ocr-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--blue-dim);}
 </style>
 </head>
 <body>
@@ -884,10 +1028,13 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink
     <div class="logo-mark">F</div>
     FinSimple
   </div>
-  <button class="biz-chip" onclick="openBizModal()">
-    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v10M1 6h10"/></svg>
-    <span id="bizNameLabel">Mi Negocio</span>
-  </button>
+  <div style="display:flex;align-items:center;gap:8px;">
+    <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()" title="Modo oscuro/claro">🌙</button>
+    <button class="biz-chip" onclick="openBizModal()">
+      <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v10M1 6h10"/></svg>
+      <span id="bizNameLabel">Mi Negocio</span>
+    </button>
+  </div>
 </header>
 
 <!-- TAB NAV -->
@@ -919,6 +1066,10 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink
   <button class="tab-btn" onclick="switchTab('impuestos',this)" id="tabImpuestosBtn">
     <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"><path d="M2 11L6.5 2L11 11"/><path d="M3.5 8h6"/></svg>
     Impuestos
+  </button>
+  <button class="tab-btn" onclick="switchTab('ajustes',this)" id="tabAjustesBtn">
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"><circle cx="6.5" cy="6.5" r="2"/><path d="M6.5 1v1.5M6.5 10v1.5M1 6.5h1.5M10 6.5H11.5M2.5 2.5l1 1M9 9l1 1M9 2.5l-1 1M3.5 9l-1 1"/></svg>
+    Ajustes
   </button>
 </nav>
 
@@ -972,6 +1123,7 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink
       </div>
       <div class="qb-row">
         <input class="qb-date" id="qbDate" type="date">
+        <button class="qb-ocr-btn" onclick="openOcrModal()" title="Escanear recibo">📷 Recibo</button>
         <button class="qb-save inc" id="qbSaveBtn" onclick="qbSave()">Guardar</button>
       </div>
     </div>
@@ -1252,7 +1404,155 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink
 
 </div>
 
+<!-- ═══════════ TAB AJUSTES ═══════════ -->
+<div class="tab-panel" id="tab-ajustes">
+
+  <div class="settings-section">
+    <div class="settings-title">🏢 Negocios</div>
+    <div class="biz-section-label">Tus negocios</div>
+    <div class="biz-list" id="settingsBizList"></div>
+    <div class="biz-new-row">
+      <input class="biz-new-input" id="settingsNewBizName" type="text" placeholder="Nombre del nuevo negocio" maxlength="40" onkeydown="if(event.key==='Enter')addBusiness()">
+      <button class="biz-new-btn" onclick="addBusiness()">+ Agregar</button>
+    </div>
+  </div>
+
+  <div class="settings-section">
+    <div class="settings-title">💾 Exportar / Importar</div>
+    <div class="settings-card">
+      <div class="settings-row">
+        <div class="settings-row-icon">📦</div>
+        <div class="settings-row-info">
+          <div class="settings-row-label">Backup completo (JSON)</div>
+          <div class="settings-row-desc">Exporta todos los datos de este negocio</div>
+        </div>
+        <button class="settings-btn" onclick="exportJSON()">Exportar</button>
+      </div>
+      <div class="settings-row">
+        <div class="settings-row-icon">📤</div>
+        <div class="settings-row-info">
+          <div class="settings-row-label">Movimientos (CSV)</div>
+          <div class="settings-row-desc">Compatible con Excel / Google Sheets</div>
+        </div>
+        <button class="settings-btn" onclick="exportCSV()">Exportar</button>
+      </div>
+      <div class="settings-row">
+        <div class="settings-row-icon">📥</div>
+        <div class="settings-row-info">
+          <div class="settings-row-label">Restaurar backup (JSON)</div>
+          <div class="settings-row-desc">Importa un backup guardado previamente</div>
+        </div>
+        <button class="settings-btn" onclick="document.getElementById('importFileInput').click()">Importar</button>
+        <input type="file" id="importFileInput" accept=".json" style="display:none" onchange="importJSON(event)">
+      </div>
+    </div>
+  </div>
+
+  <div class="settings-section">
+    <div class="settings-title">🔐 Seguridad</div>
+    <div class="settings-card">
+      <div class="settings-row" id="pinSettingsRow">
+        <div class="settings-row-icon">🔑</div>
+        <div class="settings-row-info">
+          <div class="settings-row-label" id="pinSettingsLabel">Activar PIN de acceso</div>
+          <div class="settings-row-desc" id="pinSettingsDesc">Protege la app con 4 dígitos</div>
+        </div>
+        <button class="settings-btn" id="pinSettingsBtn" onclick="openPinSetup()">Configurar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="settings-section">
+    <div class="settings-title">🎨 Apariencia</div>
+    <div class="settings-card">
+      <div class="settings-row">
+        <div class="settings-row-icon">🌙</div>
+        <div class="settings-row-info">
+          <div class="settings-row-label">Tema de la app</div>
+          <div class="settings-row-desc" id="themeDesc">Actualmente: oscuro</div>
+        </div>
+        <button class="settings-btn" onclick="toggleTheme()" id="themeSettingsBtn">Cambiar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="settings-section">
+    <div class="settings-title">⚠️ Zona de peligro</div>
+    <div class="settings-card">
+      <div class="settings-row">
+        <div class="settings-row-icon">🗑️</div>
+        <div class="settings-row-info">
+          <div class="settings-row-label">Borrar todos los datos</div>
+          <div class="settings-row-desc">Elimina movimientos, productos e inventario de este negocio</div>
+        </div>
+        <button class="settings-btn danger" onclick="clearAllData()">Borrar</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 </main>
+
+<!-- PIN LOCK SCREEN -->
+<div id="pinLock" class="hidden">
+  <div class="pin-logo"><div class="pin-logo-mark">F</div>FinSimple</div>
+  <div class="pin-title">Ingresá tu PIN</div>
+  <div class="pin-dots" id="pinDots">
+    <div class="pin-dot" id="pd0"></div>
+    <div class="pin-dot" id="pd1"></div>
+    <div class="pin-dot" id="pd2"></div>
+    <div class="pin-dot" id="pd3"></div>
+  </div>
+  <div class="pin-keypad">
+    <button class="pin-key" onclick="pinPress('1')">1</button>
+    <button class="pin-key" onclick="pinPress('2')">2</button>
+    <button class="pin-key" onclick="pinPress('3')">3</button>
+    <button class="pin-key" onclick="pinPress('4')">4</button>
+    <button class="pin-key" onclick="pinPress('5')">5</button>
+    <button class="pin-key" onclick="pinPress('6')">6</button>
+    <button class="pin-key" onclick="pinPress('7')">7</button>
+    <button class="pin-key" onclick="pinPress('8')">8</button>
+    <button class="pin-key" onclick="pinPress('9')">9</button>
+    <button class="pin-key" style="opacity:0;cursor:default" disabled></button>
+    <button class="pin-key" onclick="pinPress('0')">0</button>
+    <button class="pin-key del" onclick="pinDel()">⌫</button>
+  </div>
+  <div class="pin-error" id="pinError"></div>
+  <div class="pin-forgot" onclick="pinForgot()">Olvidé mi PIN</div>
+</div>
+
+<!-- PIN SETUP MODAL -->
+<div class="modal-overlay" id="pinSetupModal">
+  <div class="modal">
+    <div class="modal-handle"></div>
+    <div class="modal-title" id="pinSetupTitle">🔐 Configurar PIN</div>
+    <div id="pinSetupBody">
+      <p style="font-size:0.84rem;color:var(--ink2);margin-bottom:14px" id="pinSetupInstruction">Elegí un código de 4 dígitos:</p>
+      <div class="pin-setup-dots" id="pinSetupDots">
+        <div class="pin-setup-dot" id="spd0"></div>
+        <div class="pin-setup-dot" id="spd1"></div>
+        <div class="pin-setup-dot" id="spd2"></div>
+        <div class="pin-setup-dot" id="spd3"></div>
+      </div>
+      <div class="pin-keypad" style="margin:0 auto">
+        <button class="pin-key" onclick="pinSetupPress('1')">1</button>
+        <button class="pin-key" onclick="pinSetupPress('2')">2</button>
+        <button class="pin-key" onclick="pinSetupPress('3')">3</button>
+        <button class="pin-key" onclick="pinSetupPress('4')">4</button>
+        <button class="pin-key" onclick="pinSetupPress('5')">5</button>
+        <button class="pin-key" onclick="pinSetupPress('6')">6</button>
+        <button class="pin-key" onclick="pinSetupPress('7')">7</button>
+        <button class="pin-key" onclick="pinSetupPress('8')">8</button>
+        <button class="pin-key" onclick="pinSetupPress('9')">9</button>
+        <button class="pin-key" style="opacity:0" disabled></button>
+        <button class="pin-key" onclick="pinSetupPress('0')">0</button>
+        <button class="pin-key del" onclick="pinSetupDel()">⌫</button>
+      </div>
+      <div class="pin-error" id="pinSetupError" style="text-align:center"></div>
+    </div>
+  </div>
+</div>
 
 <!-- ═══ MODALS ═══ -->
 
@@ -1299,13 +1599,14 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink
 <div class="modal-overlay" id="bizModal">
   <div class="modal">
     <div class="modal-handle"></div>
-    <div class="modal-title">Nombre del negocio</div>
-    <div class="form-group">
-      <label class="form-label">¿Cómo se llama?</label>
-      <input class="form-input" id="bizInput" type="text" placeholder="Cafetería El Sol, Taller Juan…" maxlength="50">
+    <div class="modal-title">🏢 Mis negocios</div>
+    <div class="biz-section-label">Seleccioná el negocio activo</div>
+    <div class="biz-list" id="bizModalList"></div>
+    <div class="biz-new-row" style="margin-bottom:8px">
+      <input class="biz-new-input" id="bizNewInput" type="text" placeholder="Nombre del nuevo negocio" maxlength="40" onkeydown="if(event.key==='Enter')addBusiness()">
+      <button class="biz-new-btn" onclick="addBusiness()">+ Agregar</button>
     </div>
-    <button class="btn-submit acc" onclick="saveBizName()">Guardar</button>
-    <button class="btn-cancel" onclick="closeBizModal()">Cancelar</button>
+    <button class="btn-cancel" onclick="closeBizModal()">Cerrar</button>
   </div>
 </div>
 
@@ -1536,15 +1837,68 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink
   </div>
 </div>
 
+<!-- OCR Modal -->
+<div class="modal-overlay" id="ocrModal">
+  <div class="modal">
+    <div class="modal-handle"></div>
+    <div class="modal-title">📷 Escanear recibo</div>
+    <div class="ocr-dropzone" id="ocrDropzone" onclick="document.getElementById('ocrFileInput').click()" ondragover="ocrDragOver(event)" ondragleave="ocrDragLeave(event)" ondrop="ocrDrop(event)">
+      <input type="file" id="ocrFileInput" accept="image/*" style="display:none" onchange="ocrFileSelected(event)">
+      <div class="ocr-dropzone-icon">🧾</div>
+      <div class="ocr-dropzone-label">Tocá para subir una foto</div>
+      <div class="ocr-dropzone-sub">JPG, PNG, HEIC — o arrastrá la imagen acá</div>
+    </div>
+    <img id="ocrPreview" class="ocr-preview">
+    <div class="ocr-loading" id="ocrLoading">
+      <div class="ocr-loading-spin">⏳</div>
+      <div style="margin-top:8px">Analizando recibo con IA…</div>
+    </div>
+    <div class="ocr-result-box" id="ocrResultBox">
+      <div class="ocr-result-title">✨ Datos extraídos — revisá antes de guardar</div>
+      <div class="ocr-field-row">
+        <label class="ocr-field-label">Descripción del gasto</label>
+        <input class="ocr-field-input" id="ocrDesc" type="text" placeholder="Descripción">
+      </div>
+      <div class="ocr-field-row">
+        <label class="ocr-field-label">Monto ($)</label>
+        <input class="ocr-field-input" id="ocrAmount" type="number" placeholder="0.00" style="font-family:var(--mono)">
+      </div>
+      <div class="ocr-field-row">
+        <label class="ocr-field-label">Fecha</label>
+        <input class="ocr-field-input" id="ocrDate" type="date">
+      </div>
+    </div>
+    <button class="ocr-add-btn" id="ocrAddBtn" onclick="ocrSaveTransaction()">💾 Guardar como gasto</button>
+    <button class="btn-cancel" onclick="closeOcrModal()">Cancelar</button>
+  </div>
+</div>
+
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
 
 <script>
 // ═══════════════════════════════════════════
+// MULTI-BIZ STATE
+// ═══════════════════════════════════════════
+let businesses = JSON.parse(localStorage.getItem('fin_businesses') || 'null');
+if(!businesses){
+  // Migrate legacy single-business data
+  businesses = [{ id: '1', name: localStorage.getItem('fin_bizname') || 'Mi Negocio' }];
+  localStorage.setItem('fin_businesses', JSON.stringify(businesses));
+}
+let activeBizId = localStorage.getItem('fin_active_biz') || businesses[0].id;
+// Ensure active biz still exists
+if(!businesses.find(b=>b.id===activeBizId)) activeBizId = businesses[0].id;
+
+function getBizKey(key){ return `biz_${activeBizId}_${key}`; }
+function getBizData(key, def){ return JSON.parse(localStorage.getItem(getBizKey(key)) || def); }
+function setBizData(key, val){ localStorage.setItem(getBizKey(key), JSON.stringify(val)); }
+
+// ═══════════════════════════════════════════
 // STATE
 // ═══════════════════════════════════════════
-let transactions = JSON.parse(localStorage.getItem('fin_transactions') || '[]');
-let bizName      = localStorage.getItem('fin_bizname') || 'Mi Negocio';
+let transactions = getBizData('transactions', '[]');
+let bizName      = businesses.find(b=>b.id===activeBizId)?.name || 'Mi Negocio';
 let currentType  = 'income';
 let currentFilter= 'all';
 let currentMonth = new Date().getMonth();
@@ -1552,10 +1906,10 @@ let currentYear  = new Date().getFullYear();
 let barChartInst = null;
 let pieChartInst = null;
 let cfChartInst  = null;
-let cfItems      = JSON.parse(localStorage.getItem('fin_cfitems') || '[]');
-let products     = JSON.parse(localStorage.getItem('fin_products') || '[]');
-let minMargin    = parseFloat(localStorage.getItem('fin_minmargin') || '20');
-let fixedCosts   = parseFloat(localStorage.getItem('fin_fixedcosts') || '0');
+let cfItems      = getBizData('cfitems', '[]');
+let products     = getBizData('products', '[]');
+let minMargin    = parseFloat(localStorage.getItem(getBizKey('minmargin')) || '20');
+let fixedCosts   = parseFloat(localStorage.getItem(getBizKey('fixedcosts')) || '0');
 let editingProdId= null;
 let simProduct   = null;
 let cfModalKind  = 'rcv';
@@ -1574,6 +1928,12 @@ const PIE_COLORS   = ['#6366F1','#22C55E','#EF4444','#F59E0B','#A78BFA','#06B6D4
 // INIT
 // ═══════════════════════════════════════════
 function init() {
+  // Theme
+  if(localStorage.getItem('fin_theme') === 'light') applyTheme('light');
+  // PIN check
+  const pin = localStorage.getItem('fin_pin');
+  if(pin) showPinLock();
+  // Biz
   document.getElementById('bizNameLabel').textContent = bizName;
   document.getElementById('txDate').value   = toDateInput(new Date());
   document.getElementById('cfDueDate').value= toDateInput(new Date());
@@ -1700,7 +2060,7 @@ function renderDashboard(){
 // ═══════════════════════════════════════════
 // CASH FLOW MODULE
 // ═══════════════════════════════════════════
-function saveCfItems(){localStorage.setItem('fin_cfitems',JSON.stringify(cfItems));}
+function saveCfItems(){ setBizData('cfitems', cfItems); }
 
 function renderCashFlow(){
   const today=new Date();today.setHours(0,0,0,0);
@@ -2038,8 +2398,8 @@ function renderPieChart(){
 // ═══════════════════════════════════════════
 // PRODUCTOS
 // ═══════════════════════════════════════════
-function saveMinMargin(){const v=parseFloat(document.getElementById('minMarginInput').value);if(!isNaN(v)&&v>=0){minMargin=v;localStorage.setItem('fin_minmargin',minMargin);renderProducts();}}
-function saveFixedCosts(){const v=parseFloat(document.getElementById('fixedCostsInput').value);if(!isNaN(v)&&v>=0){fixedCosts=v;localStorage.setItem('fin_fixedcosts',fixedCosts);renderProducts();}}
+function saveMinMargin(){const v=parseFloat(document.getElementById('minMarginInput').value);if(!isNaN(v)&&v>=0){minMargin=v;localStorage.setItem(getBizKey('minmargin'),minMargin);renderProducts();}}
+function saveFixedCosts(){const v=parseFloat(document.getElementById('fixedCostsInput').value);if(!isNaN(v)&&v>=0){fixedCosts=v;localStorage.setItem(getBizKey('fixedcosts'),fixedCosts);renderProducts();}}
 function openProductModal(id){
   editingProdId=id||null;
   const p=id?products.find(x=>x.id===id):null;
@@ -2081,11 +2441,11 @@ function saveProduct(){
   } else {
     products.push({id:Date.now().toString(),name,cost,price});
   }
-  localStorage.setItem('fin_products',JSON.stringify(products));
+  localStorage.setItem(getBizKey('products'),JSON.stringify(products));
   closeProdModal();renderProducts();
   showToast(editingProdId?'✅ Producto actualizado':'✅ Producto agregado','green');
 }
-function deleteProduct(id){products=products.filter(p=>p.id!==id);localStorage.setItem('fin_products',JSON.stringify(products));renderProducts();showToast('🗑️ Eliminado');}
+function deleteProduct(id){products=products.filter(p=>p.id!==id);setBizData('products',products);renderProducts();showToast('🗑️ Eliminado');}
 function renderProducts(){
   document.getElementById('minMarginInput').value=minMargin;
   document.getElementById('fixedCostsInput').value=fixedCosts;
@@ -2172,6 +2532,7 @@ function switchTab(id,btn){
   if(id==='flujo')      renderCashFlow();
   if(id==='inventario') renderInventario();
   if(id==='impuestos')  renderImpuestos();
+  if(id==='ajustes')    renderSettingsTab();
 }
 
 // ═══════════════════════════════════════════
@@ -2218,22 +2579,83 @@ function saveTransaction(){
 }
 
 // ═══════════════════════════════════════════
+// MULTI-BIZ FUNCTIONS
+// ═══════════════════════════════════════════
+function reloadBizData(){
+  transactions = getBizData('transactions', '[]');
+  cfItems      = getBizData('cfitems', '[]');
+  products     = getBizData('products', '[]');
+  minMargin    = parseFloat(localStorage.getItem(getBizKey('minmargin')) || '20');
+  fixedCosts   = parseFloat(localStorage.getItem(getBizKey('fixedcosts')) || '0');
+  invEnabled   = localStorage.getItem(getBizKey('inv_enabled')) === 'true';
+  invProducts  = getBizData('inv_products', '[]');
+  invMovements = getBizData('inv_movements', '[]');
+  fiscObs      = getBizData('fisc_obs', '[]');
+  fiscPayments = getBizData('fisc_payments', '[]');
+  fiscAlertDays= parseInt(localStorage.getItem(getBizKey('fisc_alertdays')) || '7');
+}
+function switchBusiness(id){
+  activeBizId = id;
+  localStorage.setItem('fin_active_biz', activeBizId);
+  bizName = businesses.find(b=>b.id===id)?.name || 'Mi Negocio';
+  reloadBizData();
+  document.getElementById('bizNameLabel').textContent = bizName;
+  closeBizModal();
+  render();
+  if(invEnabled) renderInventario();
+  renderImpuestos();
+  showToast('✅ Cambió a: '+bizName, 'green');
+}
+function addBusiness(){
+  const inputId = document.getElementById('bizNewInput') ? 'bizNewInput' : 'settingsNewBizName';
+  const nameEl = document.getElementById(inputId);
+  const name = nameEl.value.trim();
+  if(!name) return;
+  const newBiz = { id: Date.now().toString(), name };
+  businesses.push(newBiz);
+  localStorage.setItem('fin_businesses', JSON.stringify(businesses));
+  nameEl.value = '';
+  renderBizLists();
+  showToast('✅ Negocio creado', 'green');
+}
+function deleteBusiness(id){
+  if(businesses.length <= 1){ showToast('⚠️ Necesitás al menos un negocio'); return; }
+  if(!confirm('¿Eliminar este negocio y todos sus datos?')) return;
+  Object.keys(localStorage).filter(k=>k.startsWith(`biz_${id}_`)).forEach(k=>localStorage.removeItem(k));
+  businesses = businesses.filter(b=>b.id!==id);
+  localStorage.setItem('fin_businesses', JSON.stringify(businesses));
+  if(activeBizId === id) switchBusiness(businesses[0].id);
+  else renderBizLists();
+}
+function renderBizLists(){
+  const listHtml = businesses.map(b=>`
+    <div class="biz-list-item${b.id===activeBizId?' active-biz':''}" onclick="switchBusiness('${b.id}')">
+      <div class="biz-list-icon">${b.name[0].toUpperCase()}</div>
+      <div class="biz-list-name">${escHtml(b.name)}</div>
+      ${b.id===activeBizId?'<span style="font-size:0.75rem;color:var(--accent)">✓ Activo</span>':''}
+      ${businesses.length>1?`<button class="biz-list-del" onclick="event.stopPropagation();deleteBusiness('${b.id}')">✕</button>`:''}
+    </div>`).join('');
+  ['bizModalList','settingsBizList'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el) el.innerHTML=listHtml;
+  });
+}
+
+// ═══════════════════════════════════════════
 // BIZ MODAL
 // ═══════════════════════════════════════════
-function openBizModal(){document.getElementById('bizInput').value=bizName;document.getElementById('bizModal').classList.add('open');setTimeout(()=>document.getElementById('bizInput').focus(),400);}
-function closeBizModal(){document.getElementById('bizModal').classList.remove('open');}
-function saveBizName(){
-  const val=document.getElementById('bizInput').value.trim();
-  if(!val)return;
-  bizName=val;localStorage.setItem('fin_bizname',bizName);
-  document.getElementById('bizNameLabel').textContent=bizName;
-  closeBizModal();showToast('✅ Nombre actualizado');
+function openBizModal(){
+  renderBizLists();
+  document.getElementById('bizModal').classList.add('open');
+  setTimeout(()=>{const el=document.getElementById('bizNewInput');if(el)el.focus();},400);
 }
+function closeBizModal(){document.getElementById('bizModal').classList.remove('open');}
+function saveBizName(){ closeBizModal(); } // legacy compat
 
 // ═══════════════════════════════════════════
 // UTILS
 // ═══════════════════════════════════════════
-function save(){localStorage.setItem('fin_transactions',JSON.stringify(transactions));}
+function save(){ setBizData('transactions', transactions); }
 function deleteTransaction(id){transactions=transactions.filter(t=>t.id!==id);save();render();showToast('🗑️ Movimiento eliminado');}
 
 function shakEl(el){
@@ -2254,8 +2676,10 @@ function showToast(msg,color=''){
 // ═══════════════════════════════════════════
 // KEYBOARD + OVERLAY CLOSE
 // ═══════════════════════════════════════════
-['txModal','bizModal','prodModal','simModal','cfModal','invProdModal','invMovModal','fiscObModal','fiscPayModal'].forEach(id=>{
-  document.getElementById(id).addEventListener('click',function(e){
+['txModal','bizModal','prodModal','simModal','cfModal','invProdModal','invMovModal','fiscObModal','fiscPayModal','ocrModal','pinSetupModal'].forEach(id=>{
+  const el=document.getElementById(id);
+  if(!el)return;
+  el.addEventListener('click',function(e){
     if(e.target===this){
       if(id==='txModal')closeModal();
       else if(id==='bizModal')closeBizModal();
@@ -2266,13 +2690,14 @@ function showToast(msg,color=''){
       else if(id==='invMovModal')closeInvMovModal();
       else if(id==='fiscObModal')closeFiscObModal();
       else if(id==='fiscPayModal')closeFiscPayModal();
+      else if(id==='ocrModal')closeOcrModal();
+      else if(id==='pinSetupModal')closePinSetup();
     }
   });
 });
 document.addEventListener('keydown',e=>{
-  if(e.key==='Escape'){closeModal();closeBizModal();closeProdModal();closeSimModal();closeCfModal();closeInvProdModal();closeInvMovModal();closeFiscObModal();closeFiscPayModal();}
+  if(e.key==='Escape'){closeModal();closeBizModal();closeProdModal();closeSimModal();closeCfModal();closeInvProdModal();closeInvMovModal();closeFiscObModal();closeFiscPayModal();closeOcrModal();closePinSetup();}
   if(e.key==='Enter'&&document.getElementById('txModal').classList.contains('open'))saveTransaction();
-  if(e.key==='Enter'&&document.getElementById('bizModal').classList.contains('open'))saveBizName();
   if(e.key==='Enter'&&document.getElementById('prodModal').classList.contains('open'))saveProduct();
   if(e.key==='Enter'&&document.getElementById('cfModal').classList.contains('open'))saveCfItem();
   if(e.key==='Enter'&&document.getElementById('invProdModal').classList.contains('open'))saveInvProduct();
@@ -2284,17 +2709,17 @@ document.addEventListener('keydown',e=>{
 // ═══════════════════════════════════════════
 // INVENTARIO STATE
 // ═══════════════════════════════════════════
-let invEnabled     = localStorage.getItem('fin_inv_enabled') === 'true';
-let invProducts    = JSON.parse(localStorage.getItem('fin_inv_products') || '[]');
-let invMovements   = JSON.parse(localStorage.getItem('fin_inv_movements') || '[]');
+let invEnabled     = localStorage.getItem(getBizKey('inv_enabled')) === 'true';
+let invProducts    = getBizData('inv_products', '[]');
+let invMovements   = getBizData('inv_movements', '[]');
 let editingInvProdId = null;
 let invMovTargetId   = null;
 let invMovType       = 'entrada';
 let invMovFilter     = 'all';
 
 function saveInv(){
-  localStorage.setItem('fin_inv_products', JSON.stringify(invProducts));
-  localStorage.setItem('fin_inv_movements', JSON.stringify(invMovements));
+  setBizData('inv_products', invProducts);
+  setBizData('inv_movements', invMovements);
 }
 
 // ═══════════════════════════════════════════
@@ -2302,7 +2727,7 @@ function saveInv(){
 // ═══════════════════════════════════════════
 function toggleInventario(){
   invEnabled = document.getElementById('invEnabled').checked;
-  localStorage.setItem('fin_inv_enabled', invEnabled);
+  localStorage.setItem(getBizKey('inv_enabled'), invEnabled);
   document.getElementById('invContent').style.display = invEnabled ? 'block' : 'none';
   if(invEnabled) renderInventario();
 }
@@ -2524,9 +2949,9 @@ function deleteInvMovement(id){
 // ═══════════════════════════════════════════
 // IMPUESTOS STATE
 // ═══════════════════════════════════════════
-let fiscObs       = JSON.parse(localStorage.getItem('fin_fisc_obs') || '[]');
-let fiscPayments  = JSON.parse(localStorage.getItem('fin_fisc_payments') || '[]');
-let fiscAlertDays = parseInt(localStorage.getItem('fin_fisc_alertdays') || '7');
+let fiscObs       = getBizData('fisc_obs', '[]');
+let fiscPayments  = getBizData('fisc_payments', '[]');
+let fiscAlertDays = parseInt(localStorage.getItem(getBizKey('fisc_alertdays')) || '7');
 let fiscFilter    = 'all';
 let editingFiscObId = null;
 let fiscPayTargetId = null;
@@ -2559,12 +2984,12 @@ const REGIMES = [
 let calcRegime = 'monotributo';
 
 function saveFisc(){
-  localStorage.setItem('fin_fisc_obs', JSON.stringify(fiscObs));
-  localStorage.setItem('fin_fisc_payments', JSON.stringify(fiscPayments));
+  setBizData('fisc_obs', fiscObs);
+  setBizData('fisc_payments', fiscPayments);
 }
 function saveFiscConfig(){
   const v = parseInt(document.getElementById('fiscAlertDays').value);
-  if(!isNaN(v) && v >= 1){ fiscAlertDays = v; localStorage.setItem('fin_fisc_alertdays', fiscAlertDays); renderImpuestos(); }
+  if(!isNaN(v) && v >= 1){ fiscAlertDays = v; localStorage.setItem(getBizKey('fisc_alertdays'), fiscAlertDays); renderImpuestos(); }
 }
 
 // ═══════════════════════════════════════════
@@ -2806,6 +3231,344 @@ function undoFiscPay(obId){
   const idx = fiscPayments.findIndex(p => p.obId === obId);
   if(idx !== -1) fiscPayments.splice(idx, 1);
   saveFisc(); renderImpuestos(); showToast('↩ Pago deshecho');
+}
+
+// ═══════════════════════════════════════════
+// DARK/LIGHT MODE
+// ═══════════════════════════════════════════
+function applyTheme(theme){
+  if(theme==='light'){
+    document.body.classList.add('light');
+    document.getElementById('themeToggleBtn').textContent='☀️';
+    const d=document.getElementById('themeDesc');if(d)d.textContent='Actualmente: claro';
+    const s=document.getElementById('themeSettingsBtn');if(s)s.textContent='Cambiar a oscuro';
+  } else {
+    document.body.classList.remove('light');
+    document.getElementById('themeToggleBtn').textContent='🌙';
+    const d=document.getElementById('themeDesc');if(d)d.textContent='Actualmente: oscuro';
+    const s=document.getElementById('themeSettingsBtn');if(s)s.textContent='Cambiar a claro';
+  }
+}
+function toggleTheme(){
+  const isLight=document.body.classList.contains('light');
+  const next=isLight?'dark':'light';
+  localStorage.setItem('fin_theme', next);
+  applyTheme(next);
+}
+
+// ═══════════════════════════════════════════
+// PIN LOCK
+// ═══════════════════════════════════════════
+let pinBuffer='';
+function showPinLock(){
+  document.getElementById('pinLock').classList.remove('hidden');
+  pinBuffer='';
+  updatePinDots([]);
+}
+function hidePinLock(){
+  document.getElementById('pinLock').classList.add('hidden');
+}
+function updatePinDots(buf, cls=''){
+  for(let i=0;i<4;i++){
+    const dot=document.getElementById('pd'+i);
+    dot.className='pin-dot'+(i<buf.length?' filled':'')+(cls?' '+cls:'');
+  }
+}
+function pinPress(d){
+  if(pinBuffer.length>=4)return;
+  pinBuffer+=d;
+  updatePinDots(pinBuffer);
+  document.getElementById('pinError').textContent='';
+  if(pinBuffer.length===4) checkPin();
+}
+function pinDel(){
+  pinBuffer=pinBuffer.slice(0,-1);
+  updatePinDots(pinBuffer);
+}
+function checkPin(){
+  const stored=localStorage.getItem('fin_pin');
+  if(pinBuffer===stored){
+    updatePinDots(pinBuffer);
+    setTimeout(hidePinLock,200);
+  } else {
+    updatePinDots(pinBuffer,'error');
+    document.getElementById('pinError').textContent='PIN incorrecto. Intentá de nuevo.';
+    setTimeout(()=>{pinBuffer='';updatePinDots([]);},700);
+  }
+}
+function pinForgot(){
+  if(confirm('¿Eliminar el PIN? Necesitarás configurar uno nuevo desde Ajustes.')){
+    localStorage.removeItem('fin_pin');
+    hidePinLock();
+    showToast('🔓 PIN eliminado');
+  }
+}
+
+// PIN SETUP
+let pinSetupStep=0; // 0=first entry, 1=confirm
+let pinSetupFirst='';
+let pinSetupBuf='';
+function openPinSetup(){
+  pinSetupStep=0; pinSetupFirst=''; pinSetupBuf='';
+  const hasPIN=!!localStorage.getItem('fin_pin');
+  document.getElementById('pinSetupTitle').textContent=hasPIN?'🔐 Cambiar PIN':'🔐 Configurar PIN';
+  document.getElementById('pinSetupInstruction').textContent='Elegí un código de 4 dígitos:';
+  document.getElementById('pinSetupError').textContent='';
+  updateSetupDots([]);
+  document.getElementById('pinSetupModal').classList.add('open');
+}
+function closePinSetup(){
+  document.getElementById('pinSetupModal').classList.remove('open');
+  pinSetupBuf=''; pinSetupFirst=''; pinSetupStep=0;
+}
+function updateSetupDots(buf){
+  for(let i=0;i<4;i++){
+    const d=document.getElementById('spd'+i);
+    if(d) d.className='pin-setup-dot'+(i<buf.length?' filled':'');
+  }
+}
+function pinSetupPress(d){
+  if(pinSetupBuf.length>=4)return;
+  pinSetupBuf+=d;
+  updateSetupDots(pinSetupBuf);
+  document.getElementById('pinSetupError').textContent='';
+  if(pinSetupBuf.length===4){
+    if(pinSetupStep===0){
+      pinSetupFirst=pinSetupBuf; pinSetupBuf='';
+      pinSetupStep=1;
+      document.getElementById('pinSetupInstruction').textContent='Confirmá tu PIN:';
+      updateSetupDots([]);
+    } else {
+      if(pinSetupBuf===pinSetupFirst){
+        localStorage.setItem('fin_pin', pinSetupBuf);
+        closePinSetup();
+        updatePinSettingsUI();
+        showToast('🔐 PIN configurado', 'green');
+      } else {
+        document.getElementById('pinSetupError').textContent='Los PINs no coinciden. Empezá de nuevo.';
+        setTimeout(()=>{pinSetupBuf='';pinSetupFirst='';pinSetupStep=0;document.getElementById('pinSetupInstruction').textContent='Elegí un código de 4 dígitos:';updateSetupDots([]);document.getElementById('pinSetupError').textContent='';},900);
+      }
+    }
+  }
+}
+function pinSetupDel(){
+  pinSetupBuf=pinSetupBuf.slice(0,-1);
+  updateSetupDots(pinSetupBuf);
+}
+function removePIN(){
+  if(!confirm('¿Eliminar el PIN de acceso?'))return;
+  localStorage.removeItem('fin_pin');
+  updatePinSettingsUI();
+  showToast('🔓 PIN eliminado');
+}
+function updatePinSettingsUI(){
+  const hasPIN=!!localStorage.getItem('fin_pin');
+  const lbl=document.getElementById('pinSettingsLabel');
+  const desc=document.getElementById('pinSettingsDesc');
+  const btn=document.getElementById('pinSettingsBtn');
+  if(lbl) lbl.textContent=hasPIN?'PIN activo':'Activar PIN de acceso';
+  if(desc) desc.textContent=hasPIN?'Tocá para cambiar el PIN, o eliminarlo':'Protege la app con 4 dígitos';
+  if(btn){
+    if(hasPIN){
+      btn.textContent='Cambiar';
+      const row=document.getElementById('pinSettingsRow');
+      if(row&&!row.querySelector('.settings-btn.danger')){
+        const del=document.createElement('button');
+        del.className='settings-btn danger'; del.textContent='Eliminar';
+        del.onclick=removePIN;
+        row.appendChild(del);
+      }
+    } else {
+      btn.textContent='Configurar';
+      const row=document.getElementById('pinSettingsRow');
+      const dangerBtn=row&&row.querySelector('.settings-btn.danger');
+      if(dangerBtn) dangerBtn.remove();
+    }
+  }
+}
+
+// ═══════════════════════════════════════════
+// EXPORT / IMPORT
+// ═══════════════════════════════════════════
+function exportJSON(){
+  const data={
+    exportDate: new Date().toISOString(),
+    businessName: bizName,
+    transactions, cfItems, products, minMargin, fixedCosts,
+    invEnabled, invProducts, invMovements,
+    fiscObs, fiscPayments, fiscAlertDays
+  };
+  downloadFile(
+    `finsimple_${bizName.replace(/\s+/g,'_')}_${toDateInput(new Date())}.json`,
+    JSON.stringify(data, null, 2),
+    'application/json'
+  );
+  showToast('📦 Backup exportado', 'green');
+}
+function exportCSV(){
+  const header='Fecha,Tipo,Descripción,Categoría,Monto';
+  const rows=transactions.map(t=>`"${t.date}","${t.type==='income'?'Ingreso':'Gasto'}","${t.desc.replace(/"/g,'""')}","${CAT_LABELS[t.cat]||t.cat}","${t.amount}"`);
+  const csv=[header,...rows].join('\n');
+  downloadFile(
+    `movimientos_${bizName.replace(/\s+/g,'_')}_${toDateInput(new Date())}.csv`,
+    '\uFEFF'+csv,
+    'text/csv;charset=utf-8;'
+  );
+  showToast('📤 CSV exportado', 'green');
+}
+function downloadFile(filename, content, type){
+  const blob=new Blob([content],{type});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url; a.download=filename; a.click();
+  URL.revokeObjectURL(url);
+}
+function importJSON(event){
+  const file=event.target.files[0];
+  if(!file)return;
+  const reader=new FileReader();
+  reader.onload=e=>{
+    try{
+      const data=JSON.parse(e.target.result);
+      if(!Array.isArray(data.transactions)) throw new Error('Formato inválido');
+      if(!confirm(`¿Restaurar backup de "${data.businessName||'?'}"?\nEsto reemplazará los datos actuales del negocio activo.`)) return;
+      transactions = data.transactions||[];
+      cfItems      = data.cfItems||[];
+      products     = data.products||[];
+      minMargin    = data.minMargin||20;
+      fixedCosts   = data.fixedCosts||0;
+      invEnabled   = data.invEnabled||false;
+      invProducts  = data.invProducts||[];
+      invMovements = data.invMovements||[];
+      fiscObs      = data.fiscObs||[];
+      fiscPayments = data.fiscPayments||[];
+      save(); saveCfItems(); setBizData('products',products); saveInv(); saveFisc();
+      render(); renderInventario(); renderImpuestos();
+      showToast('✅ Backup restaurado', 'green');
+    } catch(err){
+      showToast('❌ Error: archivo inválido', 'red');
+    }
+  };
+  reader.readAsText(file);
+  event.target.value='';
+}
+function clearAllData(){
+  if(!confirm('¿Borrar TODOS los datos de este negocio? Esta acción no se puede deshacer.')) return;
+  transactions=[]; cfItems=[]; products=[]; invProducts=[]; invMovements=[]; fiscObs=[]; fiscPayments=[];
+  save(); saveCfItems(); setBizData('products',products); saveInv(); saveFisc();
+  render(); renderInventario(); renderImpuestos();
+  showToast('🗑️ Datos borrados');
+}
+
+// ═══════════════════════════════════════════
+// OCR RECEIPT
+// ═══════════════════════════════════════════
+let ocrImageBase64='';
+let ocrImageMime='';
+function openOcrModal(){
+  ocrImageBase64=''; ocrImageMime='';
+  document.getElementById('ocrPreview').style.display='none';
+  document.getElementById('ocrLoading').style.display='none';
+  document.getElementById('ocrResultBox').style.display='none';
+  document.getElementById('ocrAddBtn').style.display='none';
+  document.getElementById('ocrDropzone').style.display='block';
+  document.getElementById('ocrModal').classList.add('open');
+}
+function closeOcrModal(){ document.getElementById('ocrModal').classList.remove('open'); }
+function ocrDragOver(e){ e.preventDefault(); document.getElementById('ocrDropzone').classList.add('dragover'); }
+function ocrDragLeave(){ document.getElementById('ocrDropzone').classList.remove('dragover'); }
+function ocrDrop(e){
+  e.preventDefault();
+  ocrDragLeave();
+  const file=e.dataTransfer.files[0];
+  if(file&&file.type.startsWith('image/')) processOcrFile(file);
+}
+function ocrFileSelected(e){
+  const file=e.target.files[0];
+  if(file) processOcrFile(file);
+  e.target.value='';
+}
+function processOcrFile(file){
+  const reader=new FileReader();
+  reader.onload=ev=>{
+    const dataUrl=ev.target.result;
+    ocrImageBase64=dataUrl.split(',')[1];
+    ocrImageMime=file.type;
+    const preview=document.getElementById('ocrPreview');
+    preview.src=dataUrl; preview.style.display='block';
+    document.getElementById('ocrDropzone').style.display='none';
+    runOCR();
+  };
+  reader.readAsDataURL(file);
+}
+async function runOCR(){
+  document.getElementById('ocrLoading').style.display='block';
+  document.getElementById('ocrResultBox').style.display='none';
+  document.getElementById('ocrAddBtn').style.display='none';
+  try{
+    const resp=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        model:'claude-sonnet-4-20250514',
+        max_tokens:400,
+        messages:[{
+          role:'user',
+          content:[
+            {type:'image',source:{type:'base64',media_type:ocrImageMime,data:ocrImageBase64}},
+            {type:'text',text:`Analizá este recibo/comprobante de gasto. Respondé SOLO con JSON sin markdown, en este formato exacto:
+{"desc":"descripción corta del gasto (max 50 chars)","amount":NUMERO_SIN_SIGNO,"date":"YYYY-MM-DD","confidence":"high|medium|low"}
+Si no podés determinar la fecha, usá la de hoy: ${toDateInput(new Date())}.
+Si no podés determinar el monto, usá 0.
+Sé conciso en la descripción, sin caracteres especiales.`}
+          ]
+        }]
+      })
+    });
+    const data=await resp.json();
+    const text=data.content?.find(c=>c.type==='text')?.text||'';
+    const clean=text.replace(/```json|```/g,'').trim();
+    const parsed=JSON.parse(clean);
+    document.getElementById('ocrDesc').value=parsed.desc||'';
+    document.getElementById('ocrAmount').value=parsed.amount||'';
+    document.getElementById('ocrDate').value=parsed.date||toDateInput(new Date());
+    document.getElementById('ocrResultBox').style.display='block';
+    document.getElementById('ocrAddBtn').style.display='block';
+    if(parsed.confidence==='low') showToast('⚠️ Confianza baja — revisá los datos');
+    else showToast('✨ Datos extraídos', 'green');
+  } catch(err){
+    showToast('❌ Error al analizar. Ingresá los datos manualmente.','red');
+    document.getElementById('ocrResultBox').style.display='block';
+    document.getElementById('ocrAddBtn').style.display='block';
+    document.getElementById('ocrDesc').value='';
+    document.getElementById('ocrAmount').value='';
+    document.getElementById('ocrDate').value=toDateInput(new Date());
+  } finally{
+    document.getElementById('ocrLoading').style.display='none';
+  }
+}
+function ocrSaveTransaction(){
+  const desc=document.getElementById('ocrDesc').value.trim();
+  const amount=parseFloat(document.getElementById('ocrAmount').value);
+  const date=document.getElementById('ocrDate').value;
+  if(!desc){shakEl(document.getElementById('ocrDesc'));return;}
+  if(!amount||amount<=0){shakEl(document.getElementById('ocrAmount'));return;}
+  if(!date){shakEl(document.getElementById('ocrDate'));return;}
+  const tx={id:Date.now().toString(),type:'expense',desc,amount,cat:'otros',date};
+  transactions.unshift(tx); save(); render();
+  closeOcrModal();
+  showToast('✅ Gasto registrado desde recibo','green');
+}
+
+// ═══════════════════════════════════════════
+// SETTINGS TAB
+// ═══════════════════════════════════════════
+function renderSettingsTab(){
+  renderBizLists();
+  updatePinSettingsUI();
+  const isLight=document.body.classList.contains('light');
+  const d=document.getElementById('themeDesc');
+  if(d) d.textContent='Actualmente: '+(isLight?'claro':'oscuro');
 }
 
 init();
