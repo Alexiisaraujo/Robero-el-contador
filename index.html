@@ -1101,6 +1101,105 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink
   display:flex;align-items:center;gap:6px;
 }
 .qb-ocr-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--blue-dim);}
+
+/* ── PRÓ-LABORE ── */
+.pl-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:14px;}
+.pl-title{font-weight:700;font-size:0.92rem;margin-bottom:4px;display:flex;align-items:center;gap:8px;}
+.pl-desc{font-size:0.75rem;color:var(--ink3);margin-bottom:16px;line-height:1.5;}
+.pl-input-row{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.pl-input-label{flex:1;font-size:0.84rem;color:var(--ink2);font-weight:500;}
+.pl-input-wrap{display:flex;align-items:center;gap:5px;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius-sm);padding:7px 10px;}
+.pl-input-wrap span{font-size:0.82rem;color:var(--ink3);}
+.pl-input{width:110px;text-align:right;border:none;background:none;font-family:var(--mono);font-size:0.92rem;font-weight:700;color:var(--ink);outline:none;}
+.pl-result{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px;margin-top:4px;}
+.pl-result-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--border);font-size:0.84rem;}
+.pl-result-row:last-child{border-bottom:none;}
+.pl-result-label{color:var(--ink2);}
+.pl-result-val{font-family:var(--mono);font-weight:700;}
+.pl-result-val.warn{color:var(--amber);}
+.pl-result-val.ok{color:var(--green);}
+.pl-result-val.bad{color:var(--red);}
+.pl-month-history{margin-top:14px;}
+.pl-month-history-title{font-size:0.72rem;color:var(--ink3);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;}
+.pl-hist-item{display:flex;justify-content:space-between;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px;margin-bottom:6px;font-size:0.84rem;}
+.pl-hist-month{color:var(--ink2);font-weight:500;}
+.pl-hist-val{font-family:var(--mono);font-weight:700;color:var(--accent);}
+.pl-register-btn{width:100%;padding:11px;border:none;border-radius:var(--radius-sm);background:var(--accent);color:white;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.88rem;cursor:pointer;transition:background 0.15s;margin-top:10px;}
+.pl-register-btn:hover{background:var(--accent2);}
+.pl-register-btn:active{transform:scale(0.98);}
+
+/* ── CAPITAL DE GIRO ── */
+.cg-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:14px;}
+.cg-title{font-weight:700;font-size:0.92rem;margin-bottom:4px;display:flex;align-items:center;gap:8px;}
+.cg-desc{font-size:0.75rem;color:var(--ink3);margin-bottom:16px;line-height:1.5;}
+.cg-formula{background:var(--blue-dim);border:1px solid var(--blue-mid);border-radius:var(--radius-sm);padding:10px 14px;font-size:0.78rem;color:var(--blue);font-weight:600;text-align:center;margin-bottom:14px;font-family:var(--mono);}
+.cg-result-big{text-align:center;padding:16px 0 10px;}
+.cg-result-label{font-size:0.72rem;color:var(--ink3);text-transform:uppercase;letter-spacing:0.1em;font-weight:600;margin-bottom:6px;}
+.cg-result-amount{font-family:var(--mono);font-size:2rem;font-weight:700;color:var(--accent);}
+.cg-breakdown{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px;margin-top:12px;}
+.cg-break-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--border);font-size:0.84rem;}
+.cg-break-row:last-child{border-bottom:none;}
+.cg-break-label{color:var(--ink2);}
+.cg-break-val{font-family:var(--mono);font-weight:700;}
+.cg-status{border-radius:var(--radius-sm);padding:10px 14px;margin-top:12px;font-size:0.82rem;font-weight:600;text-align:center;}
+.cg-status.ok{background:var(--green-dim);color:var(--green);border:1px solid var(--green-mid);}
+.cg-status.warn{background:var(--amber-dim);color:var(--amber);border:1px solid rgba(245,158,11,0.3);}
+.cg-status.danger{background:var(--red-dim);color:var(--red);border:1px solid var(--red-mid);}
+
+/* ── CAC + LTV ── */
+.cac-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:14px;}
+.cac-title{font-weight:700;font-size:0.92rem;margin-bottom:4px;display:flex;align-items:center;gap:8px;}
+.cac-desc{font-size:0.75rem;color:var(--ink3);margin-bottom:16px;line-height:1.5;}
+.cac-metrics-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px;}
+.cac-metric{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:13px;text-align:center;}
+.cac-metric-icon{font-size:1.3rem;margin-bottom:4px;}
+.cac-metric-label{font-size:0.68rem;color:var(--ink3);font-weight:600;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:4px;}
+.cac-metric-value{font-family:var(--mono);font-weight:700;font-size:1.2rem;}
+.cac-metric-value.cac-val{color:var(--red);}
+.cac-metric-value.ltv-val{color:var(--green);}
+.cac-metric-value.ratio-ok{color:var(--green);}
+.cac-metric-value.ratio-warn{color:var(--amber);}
+.cac-metric-value.ratio-bad{color:var(--red);}
+.cac-metric-sub{font-size:0.69rem;color:var(--ink3);margin-top:2px;}
+.cac-month-section{margin-bottom:12px;}
+.cac-month-title{font-size:0.76rem;font-weight:700;color:var(--ink2);margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;}
+.cac-history-item{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px;margin-bottom:6px;}
+.cac-hist-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;}
+.cac-hist-month{font-weight:600;font-size:0.84rem;}
+.cac-hist-cac{font-family:var(--mono);font-weight:700;font-size:0.84rem;color:var(--red);}
+.cac-hist-row{display:flex;gap:14px;font-size:0.74rem;color:var(--ink3);}
+.cac-ratio-bar{height:4px;background:var(--surface3);border-radius:2px;overflow:hidden;margin-top:6px;}
+.cac-ratio-fill{height:100%;border-radius:2px;transition:width 0.4s;}
+
+/* ── MINI CRM ── */
+.crm-stats-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:16px;}
+.crm-stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px 10px;text-align:center;}
+.crm-stat-icon{font-size:1rem;margin-bottom:3px;}
+.crm-stat-label{font-size:0.67rem;color:var(--ink3);font-weight:500;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;}
+.crm-stat-val{font-family:var(--mono);font-weight:700;font-size:1rem;}
+.crm-filter-row{display:flex;gap:5px;margin-bottom:12px;flex-wrap:wrap;}
+.crm-channel-bar{margin-bottom:16px;}
+.crm-channel-title{font-size:0.76rem;font-weight:700;color:var(--ink2);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.07em;}
+.crm-channel-item{margin-bottom:6px;}
+.crm-channel-header{display:flex;justify-content:space-between;font-size:0.78rem;margin-bottom:3px;}
+.crm-channel-name{color:var(--ink2);font-weight:500;}
+.crm-channel-count{color:var(--ink3);}
+.crm-channel-track{height:6px;background:var(--surface3);border-radius:3px;overflow:hidden;}
+.crm-channel-fill{height:100%;border-radius:3px;background:var(--accent);transition:width 0.4s;}
+.crm-client-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:13px;margin-bottom:8px;animation:fadeUp 0.2s ease;}
+.crm-client-header{display:flex;align-items:center;gap:10px;margin-bottom:6px;}
+.crm-client-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--accent2),var(--blue));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.88rem;color:white;flex-shrink:0;}
+.crm-client-info{flex:1;min-width:0;}
+.crm-client-name{font-weight:600;font-size:0.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.crm-client-channel{font-size:0.71rem;color:var(--ink3);margin-top:1px;}
+.crm-client-total{font-family:var(--mono);font-weight:700;font-size:0.9rem;color:var(--green);flex-shrink:0;}
+.crm-client-del{background:none;border:none;color:var(--ink3);font-size:0.85rem;cursor:pointer;padding:3px;border-radius:5px;flex-shrink:0;}
+.crm-client-del:hover{color:var(--red);background:var(--red-dim);}
+.crm-client-footer{display:flex;gap:10px;flex-wrap:wrap;}
+.crm-client-tag{font-size:0.7rem;padding:2px 8px;border-radius:10px;background:var(--surface2);color:var(--ink3);}
+.crm-client-tag.best{background:var(--green-dim);color:var(--green);}
+.btn-add-client{width:100%;padding:13px;border:1.5px dashed var(--accent);border-radius:var(--radius-sm);background:none;color:var(--accent);font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.85rem;cursor:pointer;transition:all 0.15s;margin-bottom:14px;display:flex;align-items:center;justify-content:center;gap:8px;}
+.btn-add-client:hover{background:var(--blue-dim);}
 </style>
 </head>
 <body>
@@ -1157,6 +1256,22 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink
   <button class="tab-btn" onclick="switchTab('ajustes',this)" id="tabAjustesBtn">
     <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"><circle cx="6.5" cy="6.5" r="2"/><path d="M6.5 1v1.5M6.5 10v1.5M1 6.5h1.5M10 6.5H11.5M2.5 2.5l1 1M9 9l1 1M9 2.5l-1 1M3.5 9l-1 1"/></svg>
     Ajustes
+  </button>
+  <button class="tab-btn" onclick="switchTab('prolabore',this)" id="tabProlaboreBtn">
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"><circle cx="6.5" cy="4" r="2.2"/><path d="M2 12c0-2.5 2-4 4.5-4s4.5 1.5 4.5 4"/></svg>
+    Pró-labore
+  </button>
+  <button class="tab-btn" onclick="switchTab('capital',this)" id="tabCapitalBtn">
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"><rect x="1" y="4" width="11" height="7" rx="1.5"/><path d="M4 4V3a2 2 0 014 0v1"/><path d="M5 8h3"/></svg>
+    Cap. Giro
+  </button>
+  <button class="tab-btn" onclick="switchTab('cacltv',this)" id="tabCacltvBtn">
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"><path d="M2 11 L5 7 L8 9 L11 4"/><circle cx="5" cy="7" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="9" r="1" fill="currentColor" stroke="none"/></svg>
+    CAC+LTV
+  </button>
+  <button class="tab-btn" onclick="switchTab('crm',this)" id="tabCrmBtn">
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"><circle cx="4.5" cy="4" r="1.8"/><circle cx="9" cy="4" r="1.8"/><path d="M1 11c0-2 1.5-3.2 3.5-3.2S8 9 8 11"/><path d="M9 7.8c1.5.2 2.5 1.2 2.5 3.2"/></svg>
+    Clientes
   </button>
 </nav>
 
@@ -1711,6 +1826,231 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink
 
 </div>
 
+<!-- ═══════════ TAB: PRÓ-LABORE ═══════════ -->
+<div class="tab-panel" id="tab-prolabore">
+
+  <div class="pl-card">
+    <div class="pl-title">👤 Pró-labore mensual</div>
+    <div class="pl-desc">Tu sueldo como dueño, registrado como gasto fijo del negocio. Así el margen que ves es real y no estás financiando tu vida sin darte cuenta.</div>
+
+    <div class="pl-input-row">
+      <div class="pl-input-label">Mi sueldo como dueño</div>
+      <div class="pl-input-wrap">
+        <span>$</span>
+        <input class="pl-input" id="plSueldo" type="number" min="0" step="100" placeholder="0" oninput="renderProlabore()">
+      </div>
+    </div>
+    <div class="pl-input-row">
+      <div class="pl-input-label">¿Cuántos socios toman sueldo?</div>
+      <div class="pl-input-wrap">
+        <input class="pl-input" id="plSocios" type="number" min="1" step="1" value="1" style="width:50px" oninput="renderProlabore()">
+      </div>
+    </div>
+
+    <div class="pl-result" id="plResult" style="display:none">
+      <div class="pl-result-row">
+        <span class="pl-result-label">Total pró-labore del mes</span>
+        <span class="pl-result-val" id="plTotal">$0</span>
+      </div>
+      <div class="pl-result-row">
+        <span class="pl-result-label">Resultado neto (antes del sueldo)</span>
+        <span class="pl-result-val" id="plNetBefore">$0</span>
+      </div>
+      <div class="pl-result-row">
+        <span class="pl-result-label">Resultado real (después del sueldo)</span>
+        <span class="pl-result-val" id="plNetAfter">$0</span>
+      </div>
+      <div class="pl-result-row">
+        <span class="pl-result-label">Margen real del negocio</span>
+        <span class="pl-result-val" id="plMargen">—</span>
+      </div>
+    </div>
+
+    <button class="pl-register-btn" onclick="registrarProlabore()">💾 Registrar como gasto este mes</button>
+  </div>
+
+  <div class="pl-card">
+    <div class="pl-title">📅 Historial de pró-labores</div>
+    <div class="pl-month-history" id="plHistory">
+      <div class="empty-state"><div class="ei">👤</div><p>Aún no registraste pró-labores.<br>Configurá tu sueldo y guardalo.</p></div>
+    </div>
+  </div>
+
+  <div class="cf-info-pill">
+    💡 <strong>¿Por qué es importante?</strong><br>
+    Si no registrás tu sueldo, el negocio parece más rentable de lo que es. El pró-labore hace visible el costo real de tu trabajo.
+  </div>
+</div>
+
+<!-- ═══════════ TAB: CAPITAL DE GIRO ═══════════ -->
+<div class="tab-panel" id="tab-capital">
+
+  <div class="cg-card">
+    <div class="cg-title">💼 Calculadora de capital de giro</div>
+    <div class="cg-desc">El capital de giro es la plata que necesitás tener siempre disponible para que el negocio no se trabe entre que comprás y que cobrás.</div>
+    <div class="cg-formula">Días de operación × Gasto diario promedio = Capital necesario</div>
+
+    <div class="pl-input-row">
+      <div class="pl-input-label">Días de operación que cubrís</div>
+      <div class="pl-input-wrap">
+        <input class="pl-input" id="cgDias" type="number" min="1" step="1" placeholder="30" oninput="renderCapital()" style="width:60px">
+        <span>días</span>
+      </div>
+    </div>
+    <div class="pl-input-row" style="margin-bottom:0">
+      <div class="pl-input-label">Gasto diario promedio (o dejar en auto)</div>
+      <div class="pl-input-wrap">
+        <span>$</span>
+        <input class="pl-input" id="cgGastoDiario" type="number" min="0" step="100" placeholder="Auto" oninput="renderCapital()">
+      </div>
+    </div>
+    <div style="font-size:0.72rem;color:var(--ink3);margin-bottom:14px;margin-top:5px">Si dejás "Auto", usa el promedio real de tus gastos de los últimos 3 meses.</div>
+
+    <div class="cg-result-big">
+      <div class="cg-result-label">Capital mínimo recomendado</div>
+      <div class="cg-result-amount" id="cgResultado">$0</div>
+    </div>
+
+    <div class="cg-breakdown" id="cgBreakdown">
+      <div class="cg-break-row">
+        <span class="cg-break-label">Gasto diario usado</span>
+        <span class="cg-break-val" id="cgGastoDiarioUsado">—</span>
+      </div>
+      <div class="cg-break-row">
+        <span class="cg-break-label">Días cubiertos</span>
+        <span class="cg-break-val" id="cgDiasUsados">—</span>
+      </div>
+      <div class="cg-break-row">
+        <span class="cg-break-label">Ingresos del mes actual</span>
+        <span class="cg-break-val" id="cgIngMes">—</span>
+      </div>
+    </div>
+
+    <div class="cg-status" id="cgStatus" style="display:none"></div>
+  </div>
+
+  <div class="cg-card">
+    <div class="cg-title">📊 Referencia rápida</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px">
+      <div class="cac-metric"><div class="cac-metric-icon">🏪</div><div class="cac-metric-label">Retail / Tienda</div><div class="cac-metric-value" style="font-size:0.9rem;color:var(--amber)">30–45 días</div></div>
+      <div class="cac-metric"><div class="cac-metric-icon">🍽️</div><div class="cac-metric-label">Gastronomía</div><div class="cac-metric-value" style="font-size:0.9rem;color:var(--amber)">15–30 días</div></div>
+      <div class="cac-metric"><div class="cac-metric-icon">🔧</div><div class="cac-metric-label">Servicios</div><div class="cac-metric-value" style="font-size:0.9rem;color:var(--green)">15–20 días</div></div>
+      <div class="cac-metric"><div class="cac-metric-icon">🏭</div><div class="cac-metric-label">Manufactura</div><div class="cac-metric-value" style="font-size:0.9rem;color:var(--red)">45–90 días</div></div>
+    </div>
+  </div>
+
+  <div class="cf-info-pill">
+    💡 <strong>¿Por qué importa?</strong><br>
+    Muchos negocios rentables quiebran por falta de liquidez. El capital de giro es tu colchón para no depender de crédito en el día a día.
+  </div>
+</div>
+
+<!-- ═══════════ TAB: CAC + LTV ═══════════ -->
+<div class="tab-panel" id="tab-cacltv">
+
+  <div class="cac-metrics-grid" style="margin-bottom:14px">
+    <div class="cac-metric" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px">
+      <div class="cac-metric-icon">🎯</div>
+      <div class="cac-metric-label">CAC del mes</div>
+      <div class="cac-metric-value cac-val" id="cacValorMes">—</div>
+      <div class="cac-metric-sub">Costo por cliente nuevo</div>
+    </div>
+    <div class="cac-metric" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px">
+      <div class="cac-metric-icon">♾️</div>
+      <div class="cac-metric-label">LTV estimado</div>
+      <div class="cac-metric-value ltv-val" id="ltvValor">—</div>
+      <div class="cac-metric-sub">Valor de vida del cliente</div>
+    </div>
+    <div class="cac-metric" style="grid-column:1/-1;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px">
+      <div class="cac-metric-icon">⚖️</div>
+      <div class="cac-metric-label">Ratio LTV/CAC</div>
+      <div class="cac-metric-value" id="ltvCacRatio">—</div>
+      <div class="cac-metric-sub" id="ltvCacRatioDesc">Ideal: más de 3x</div>
+    </div>
+  </div>
+
+  <div class="cac-card">
+    <div class="cac-title">🎯 Registrar inversión en marketing</div>
+    <div class="cac-desc">Ingresá cuánto gastaste en conseguir clientes este mes y cuántos clientes nuevos entraron.</div>
+
+    <div class="pl-input-row">
+      <div class="pl-input-label">Gasto en marketing / publicidad</div>
+      <div class="pl-input-wrap"><span>$</span><input class="pl-input" id="cacGasto" type="number" min="0" step="100" placeholder="0" oninput="renderCacLtv()"></div>
+    </div>
+    <div class="pl-input-row">
+      <div class="pl-input-label">Clientes nuevos que entraron</div>
+      <div class="pl-input-wrap"><input class="pl-input" id="cacClientes" type="number" min="0" step="1" placeholder="0" oninput="renderCacLtv()" style="width:60px"></div>
+    </div>
+    <button class="pl-register-btn" onclick="guardarCacMes()">💾 Guardar registro del mes</button>
+  </div>
+
+  <div class="cac-card">
+    <div class="cac-title">♾️ Configurar LTV</div>
+    <div class="cac-desc">El LTV es cuánto te genera un cliente a lo largo de su relación con vos.</div>
+
+    <div class="pl-input-row">
+      <div class="pl-input-label">Ticket promedio de venta</div>
+      <div class="pl-input-wrap"><span>$</span><input class="pl-input" id="ltvTicket" type="number" min="0" step="100" placeholder="0" oninput="renderCacLtv()"></div>
+    </div>
+    <div class="pl-input-row">
+      <div class="pl-input-label">Compras por mes estimadas</div>
+      <div class="pl-input-wrap"><input class="pl-input" id="ltvFreq" type="number" min="0" step="0.1" placeholder="1" oninput="renderCacLtv()" style="width:60px"><span>x/mes</span></div>
+    </div>
+    <div class="pl-input-row">
+      <div class="pl-input-label">Meses promedio que te dura un cliente</div>
+      <div class="pl-input-wrap"><input class="pl-input" id="ltvMeses" type="number" min="1" step="1" placeholder="12" oninput="renderCacLtv()" style="width:60px"><span>meses</span></div>
+    </div>
+  </div>
+
+  <div class="cac-month-section">
+    <div class="cac-month-title">
+      <span>📆 Historial CAC por mes</span>
+    </div>
+    <div id="cacHistorial">
+      <div class="empty-state"><div class="ei">🎯</div><p>Registrá tu primer mes de marketing<br>para ver el historial.</p></div>
+    </div>
+  </div>
+
+  <div class="cf-info-pill">
+    💡 <strong>Clave para crecer:</strong><br>
+    Si tu LTV es menor que tu CAC, estás perdiendo plata en cada cliente. Lo ideal es LTV ≥ 3× CAC. Bajo 1× es señal de alarma inmediata.
+  </div>
+</div>
+
+<!-- ═══════════ TAB: CLIENTES (Mini CRM) ═══════════ -->
+<div class="tab-panel" id="tab-crm">
+
+  <div class="crm-stats-row" id="crmStats">
+    <div class="crm-stat"><div class="crm-stat-icon">👥</div><div class="crm-stat-label">Clientes</div><div class="crm-stat-val" id="crmTotalClientes">0</div></div>
+    <div class="crm-stat"><div class="crm-stat-icon">💰</div><div class="crm-stat-label">Total comprado</div><div class="crm-stat-val" id="crmTotalComprado">$0</div></div>
+    <div class="crm-stat"><div class="crm-stat-icon">🎫</div><div class="crm-stat-label">Ticket prom.</div><div class="crm-stat-val" id="crmTicketProm">—</div></div>
+  </div>
+
+  <div class="crm-channel-bar" id="crmChannelBar" style="display:none">
+    <div class="crm-channel-title">Origen de clientes</div>
+    <div id="crmChannelList"></div>
+  </div>
+
+  <button class="btn-add-client" onclick="openCrmModal()">
+    <span style="font-size:1.1rem">＋</span> Agregar cliente
+  </button>
+
+  <div class="crm-filter-row">
+    <button class="filter-btn active" onclick="setCrmFilter('todos',this)">Todos</button>
+    <button class="filter-btn" onclick="setCrmFilter('instagram',this)">📸 Instagram</button>
+    <button class="filter-btn" onclick="setCrmFilter('boca',this)">💬 Boca a boca</button>
+    <button class="filter-btn" onclick="setCrmFilter('publicidad',this)">📣 Publicidad</button>
+    <button class="filter-btn" onclick="setCrmFilter('otro',this)">Otro</button>
+  </div>
+
+  <div id="crmClientList"></div>
+
+  <div class="cf-info-pill" style="margin-top:10px">
+    💡 <strong>¿Para qué sirve?</strong><br>
+    Saber de dónde vienen tus mejores clientes te ayuda a invertir mejor en marketing y multiplicar lo que ya funciona.
+  </div>
+</div>
+
 </main>
 
 <!-- PIN LOCK SCREEN -->
@@ -2092,6 +2432,45 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink
   </div>
 </div>
 
+<!-- CRM Client Modal -->
+<div class="modal-overlay" id="crmModal">
+  <div class="modal">
+    <div class="modal-handle"></div>
+    <div class="modal-title" id="crmModalTitle">👤 Nuevo cliente</div>
+    <div class="form-group">
+      <label class="form-label">Nombre</label>
+      <input class="form-input" id="crmNombre" type="text" placeholder="Ej: María García" maxlength="60">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Canal de origen</label>
+      <select class="form-select" id="crmCanal">
+        <option value="instagram">📸 Instagram</option>
+        <option value="boca">💬 Boca a boca</option>
+        <option value="publicidad">📣 Publicidad paga</option>
+        <option value="google">🔍 Google / SEO</option>
+        <option value="facebook">👤 Facebook</option>
+        <option value="referido">🤝 Referido</option>
+        <option value="otro">📌 Otro</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Total comprado ($)</label>
+      <div class="form-hint">Valor acumulado de sus compras</div>
+      <input class="form-input" id="crmTotal" type="number" min="0" step="0.01" placeholder="0.00" style="font-family:var(--mono)">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Fecha de primera compra</label>
+      <input class="form-input" id="crmFecha" type="date">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Nota (opcional)</label>
+      <input class="form-input" id="crmNota" type="text" placeholder="Ej: cliente fiel, paga al contado…" maxlength="100">
+    </div>
+    <button class="btn-submit inc" id="crmSubmitBtn" onclick="saveCrmClient()">Guardar cliente</button>
+    <button class="btn-cancel" onclick="closeCrmModal()">Cancelar</button>
+  </div>
+</div>
+
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
 
@@ -2171,6 +2550,10 @@ function init() {
     if(bmp) bmp.value = beMarginPctVal  || minMargin  || '';
     const mi = document.getElementById('metaInput');
     if(mi) mi.value = metas[metaKey()] || '';
+    // Init CAC/LTV fields
+    if(ltvConfig.ticket) document.getElementById('ltvTicket').value=ltvConfig.ticket;
+    if(ltvConfig.freq)   document.getElementById('ltvFreq').value=ltvConfig.freq;
+    if(ltvConfig.meses)  document.getElementById('ltvMeses').value=ltvConfig.meses;
   }, 50);
 }
 
@@ -2762,6 +3145,10 @@ function switchTab(id,btn){
   if(id==='impuestos')  renderImpuestos();
   if(id==='analisis')   renderAnalisis();
   if(id==='ajustes')    renderSettingsTab();
+  if(id==='prolabore')  { renderProlabore(); }
+  if(id==='capital')    { renderCapital(); }
+  if(id==='cacltv')     { renderCacLtv(); renderCacHistory(); }
+  if(id==='crm')        { renderCrm(); }
 }
 
 // ═══════════════════════════════════════════
@@ -4111,6 +4498,309 @@ function renderMeta(){
   document.getElementById('metaFalta').textContent   = pct>=100 ? '✅ Lograda' : fmt(falta);
   document.getElementById('metaDiasRest').textContent= diasRest > 0 ? diasRest+' días' : '—';
   document.getElementById('metaPromDia').textContent  = diasRest>0 && falta>0 ? fmt(promDia)+'/día' : '—';
+}
+
+// ─── PRÓ-LABORE ─────────────────────────────
+let prolaboreHistory = getBizData('prolabore', '[]');
+
+function renderProlabore(){
+  const sueldo  = parseFloat(document.getElementById('plSueldo')?.value||0);
+  const socios  = parseInt(document.getElementById('plSocios')?.value||1);
+  const resultEl= document.getElementById('plResult');
+  if(!resultEl) return;
+
+  const monthly = transactions.filter(inCurrentMonth);
+  const income  = monthly.filter(t=>t.type==='income').reduce((s,t)=>s+t.amount,0);
+  const expenses= monthly.filter(t=>t.type==='expense').reduce((s,t)=>s+t.amount,0);
+  const netBefore = income - expenses;
+  const totalPL   = sueldo * socios;
+  const netAfter  = netBefore - totalPL;
+  const margen    = income > 0 ? (netAfter / income * 100) : 0;
+
+  if(!sueldo){ resultEl.style.display='none'; return; }
+  resultEl.style.display='block';
+
+  document.getElementById('plTotal').textContent      = fmt(totalPL);
+  document.getElementById('plTotal').className        = 'pl-result-val';
+  const nbEl = document.getElementById('plNetBefore');
+  nbEl.textContent = fmt(netBefore);
+  nbEl.className   = 'pl-result-val '+(netBefore>=0?'ok':'bad');
+  const naEl = document.getElementById('plNetAfter');
+  naEl.textContent = fmt(netAfter);
+  naEl.className   = 'pl-result-val '+(netAfter>=0?'ok':netAfter>=-totalPL*0.5?'warn':'bad');
+  const mEl = document.getElementById('plMargen');
+  mEl.textContent = margen.toFixed(1)+'%';
+  mEl.className   = 'pl-result-val '+(margen>15?'ok':margen>0?'warn':'bad');
+
+  // History
+  const hist = prolaboreHistory.slice().reverse();
+  const histEl = document.getElementById('plHistory');
+  if(!histEl) return;
+  if(hist.length===0){
+    histEl.innerHTML='<div class="empty-state"><div class="ei">👤</div><p>Aún no registraste pró-labores.<br>Configurá tu sueldo y guardalo.</p></div>';
+    return;
+  }
+  histEl.innerHTML = hist.map(h=>`
+    <div class="pl-hist-item">
+      <span class="pl-hist-month">${h.label}</span>
+      <span class="pl-hist-val">${fmt(h.total)}</span>
+    </div>
+  `).join('');
+}
+
+function registrarProlabore(){
+  const sueldo = parseFloat(document.getElementById('plSueldo')?.value||0);
+  const socios = parseInt(document.getElementById('plSocios')?.value||1);
+  if(!sueldo || sueldo<=0){ showToast('⚠️ Ingresá un monto válido','amber'); return; }
+  const total = sueldo * socios;
+  const label = MONTHS[currentMonth]+' '+currentYear;
+  const existing = prolaboreHistory.find(h=>h.month===currentMonth&&h.year===currentYear);
+  if(existing){ existing.total=total; existing.socios=socios; existing.sueldo=sueldo; }
+  else { prolaboreHistory.push({month:currentMonth,year:currentYear,label,total,sueldo,socios}); }
+  setBizData('prolabore', prolaboreHistory);
+  // Also register as expense transaction
+  const today = toDateInput(new Date());
+  const tx={id:'pl_'+Date.now(),type:'expense',desc:'Pró-labore '+label,amount:total,cat:'sueldos',date:today};
+  transactions.unshift(tx);
+  save(); render(); renderProlabore();
+  showToast('✅ Pró-labore registrado como gasto','green');
+}
+
+// ─── CAPITAL DE GIRO ─────────────────────────
+function renderCapital(){
+  const diasInput = parseFloat(document.getElementById('cgDias')?.value||0);
+  const manualGasto = parseFloat(document.getElementById('cgGastoDiario')?.value||0);
+
+  // Auto-calc daily expense from last 3 months
+  let autoDiario = 0;
+  const now = new Date();
+  let totalGastos=0, mesesConData=0;
+  for(let i=0;i<3;i++){
+    let m=currentMonth-i, y=currentYear;
+    while(m<0){m+=12;y--;}
+    const txs=transactions.filter(t=>{ const d=new Date(t.date+'T12:00:00'); return d.getMonth()===m&&d.getFullYear()===y&&t.type==='expense'; });
+    if(txs.length){ totalGastos+=txs.reduce((s,t)=>s+t.amount,0); mesesConData++; }
+  }
+  if(mesesConData>0) autoDiario = (totalGastos/mesesConData)/30;
+
+  const gastoDiario = manualGasto>0 ? manualGasto : autoDiario;
+  const dias = diasInput>0 ? diasInput : 30;
+  const resultado = gastoDiario * dias;
+
+  const monthly = transactions.filter(inCurrentMonth);
+  const ingMes  = monthly.filter(t=>t.type==='income').reduce((s,t)=>s+t.amount,0);
+
+  document.getElementById('cgResultado').textContent   = fmt(resultado);
+  document.getElementById('cgGastoDiarioUsado').textContent = fmt(gastoDiario)+'/día'+(manualGasto>0?' (manual)':' (auto)');
+  document.getElementById('cgDiasUsados').textContent  = dias+' días';
+  document.getElementById('cgIngMes').textContent      = fmt(ingMes);
+
+  const statusEl = document.getElementById('cgStatus');
+  statusEl.style.display='block';
+  if(ingMes >= resultado){
+    statusEl.className='cg-status ok';
+    statusEl.textContent='✅ Tus ingresos del mes cubren el capital de giro necesario';
+  } else if(ingMes >= resultado*0.7){
+    statusEl.className='cg-status warn';
+    statusEl.textContent=`⚠️ Tus ingresos cubren el ${(ingMes/resultado*100).toFixed(0)}% — podría haber tensión de caja`;
+  } else {
+    statusEl.className='cg-status danger';
+    statusEl.textContent=`🔴 Ingresos insuficientes para cubrir el capital de giro — revisá financiamiento`;
+  }
+}
+
+// ─── CAC + LTV ───────────────────────────────
+let cacHistory = getBizData('cachistory', '[]');
+let ltvConfig  = getBizData('ltvconfig', '{"ticket":0,"freq":1,"meses":12}');
+
+function renderCacLtv(){
+  // Restore saved LTV config to inputs if empty
+  const tEl=document.getElementById('ltvTicket');
+  const fEl=document.getElementById('ltvFreq');
+  const mEl=document.getElementById('ltvMeses');
+  if(!tEl) return;
+
+  const ticket = parseFloat(tEl.value||ltvConfig.ticket||0);
+  const freq   = parseFloat(fEl.value||ltvConfig.freq||1);
+  const meses  = parseFloat(mEl.value||ltvConfig.meses||12);
+  const ltv    = ticket * freq * meses;
+
+  // CAC for current month input
+  const gasto    = parseFloat(document.getElementById('cacGasto')?.value||0);
+  const clientes = parseInt(document.getElementById('cacClientes')?.value||0);
+  const cac      = (gasto>0&&clientes>0) ? gasto/clientes : null;
+  const ratio    = (cac&&ltv>0) ? ltv/cac : null;
+
+  document.getElementById('ltvValor').textContent = ltv>0 ? fmt(ltv) : '—';
+  document.getElementById('cacValorMes').textContent = cac!=null ? fmt(cac) : '—';
+
+  const ratioEl = document.getElementById('ltvCacRatio');
+  const ratioDesc = document.getElementById('ltvCacRatioDesc');
+  if(ratio!=null){
+    ratioEl.textContent = ratio.toFixed(1)+'x';
+    if(ratio>=3){ ratioEl.className='cac-metric-value ratio-ok'; ratioDesc.textContent='✅ Excelente — el negocio es escalable'; }
+    else if(ratio>=1){ ratioEl.className='cac-metric-value ratio-warn'; ratioDesc.textContent='⚠️ Mejorable — intentá bajar el CAC o subir el LTV'; }
+    else { ratioEl.className='cac-metric-value ratio-bad'; ratioDesc.textContent='🔴 Alerta — perdés plata por cada cliente nuevo'; }
+  } else {
+    ratioEl.textContent='—'; ratioEl.className='cac-metric-value'; ratioDesc.textContent='Ideal: más de 3x';
+  }
+
+  // LTV config persists on input
+  ltvConfig = {ticket, freq, meses};
+  setBizData('ltvconfig', ltvConfig);
+
+  // Render history
+  renderCacHistory();
+}
+
+function guardarCacMes(){
+  const gasto    = parseFloat(document.getElementById('cacGasto')?.value||0);
+  const clientes = parseInt(document.getElementById('cacClientes')?.value||0);
+  if(!gasto||!clientes){ showToast('⚠️ Completá gasto y clientes nuevos','amber'); return; }
+  const cac   = gasto/clientes;
+  const label = MONTHS[currentMonth]+' '+currentYear;
+  const ex    = cacHistory.find(h=>h.month===currentMonth&&h.year===currentYear);
+  if(ex){ ex.gasto=gasto;ex.clientes=clientes;ex.cac=cac; }
+  else { cacHistory.push({month:currentMonth,year:currentYear,label,gasto,clientes,cac}); }
+  setBizData('cachistory', cacHistory);
+  renderCacHistory();
+  showToast('✅ CAC del mes guardado','green');
+}
+
+function renderCacHistory(){
+  const histEl=document.getElementById('cacHistorial');
+  if(!histEl) return;
+  const hist=[...cacHistory].sort((a,b)=>b.year-a.year||(b.month-a.month));
+  if(!hist.length){
+    histEl.innerHTML='<div class="empty-state"><div class="ei">🎯</div><p>Registrá tu primer mes de marketing<br>para ver el historial.</p></div>';
+    return;
+  }
+  const ltv = parseFloat(document.getElementById('ltvTicket')?.value||ltvConfig.ticket||0)
+            * parseFloat(document.getElementById('ltvFreq')?.value||ltvConfig.freq||1)
+            * parseFloat(document.getElementById('ltvMeses')?.value||ltvConfig.meses||12);
+  histEl.innerHTML = hist.map(h=>{
+    const ratio = (ltv>0&&h.cac>0) ? ltv/h.cac : 0;
+    const fillW = Math.min(100, ratio/5*100).toFixed(0);
+    const fillColor = ratio>=3?'var(--green)':ratio>=1?'var(--amber)':'var(--red)';
+    return `<div class="cac-history-item">
+      <div class="cac-hist-header"><span class="cac-hist-month">${h.label}</span><span class="cac-hist-cac">CAC: ${fmt(h.cac)}</span></div>
+      <div class="cac-hist-row"><span>Gasto: ${fmt(h.gasto)}</span><span>Clientes nuevos: ${h.clientes}</span></div>
+      ${ltv>0?`<div class="cac-ratio-bar"><div class="cac-ratio-fill" style="width:${fillW}%;background:${fillColor}"></div></div>`:''}
+    </div>`;
+  }).join('');
+}
+
+// ─── MINI CRM ────────────────────────────────
+let crmClients  = getBizData('crmclients', '[]');
+let crmFilter   = 'todos';
+let editingCrmId= null;
+
+const CRM_CHANNELS = {instagram:'📸 Instagram',boca:'💬 Boca a boca',publicidad:'📣 Publicidad',google:'🔍 Google',facebook:'👤 Facebook',referido:'🤝 Referido',otro:'📌 Otro'};
+
+function renderCrm(){
+  const totalC = crmClients.length;
+  const totalV = crmClients.reduce((s,c)=>s+c.total,0);
+  const tickP  = totalC>0 ? totalV/totalC : 0;
+  document.getElementById('crmTotalClientes').textContent = totalC;
+  document.getElementById('crmTotalComprado').textContent = totalC>0 ? fmt(totalV) : '$0';
+  document.getElementById('crmTicketProm').textContent    = tickP>0 ? fmt(tickP) : '—';
+
+  // Channel distribution
+  const barEl=document.getElementById('crmChannelBar');
+  if(totalC>0){
+    barEl.style.display='block';
+    const counts={};
+    crmClients.forEach(c=>{ counts[c.canal]=(counts[c.canal]||0)+1; });
+    const sorted=Object.entries(counts).sort((a,b)=>b[1]-a[1]);
+    document.getElementById('crmChannelList').innerHTML = sorted.map(([canal,n])=>{
+      const pct=(n/totalC*100).toFixed(0);
+      return `<div class="crm-channel-item">
+        <div class="crm-channel-header"><span class="crm-channel-name">${CRM_CHANNELS[canal]||canal}</span><span class="crm-channel-count">${n} cliente${n>1?'s':''} · ${pct}%</span></div>
+        <div class="crm-channel-track"><div class="crm-channel-fill" style="width:${pct}%"></div></div>
+      </div>`;
+    }).join('');
+  } else { barEl.style.display='none'; }
+
+  // Client list
+  const sorted = [...crmClients]
+    .filter(c=> crmFilter==='todos' || c.canal===crmFilter)
+    .sort((a,b)=>b.total-a.total);
+  const listEl=document.getElementById('crmClientList');
+  if(!sorted.length){
+    listEl.innerHTML='<div class="empty-state"><div class="ei">👥</div><p>Sin clientes en esta vista.<br>Agregá tu primer cliente arriba.</p></div>';
+    return;
+  }
+  const maxTotal = Math.max(...crmClients.map(c=>c.total));
+  listEl.innerHTML = sorted.map((c,i)=>{
+    const initials = c.nombre.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
+    const isBest   = c.total===maxTotal && totalC>1;
+    const desde    = c.fecha ? new Date(c.fecha+'T12:00:00').toLocaleDateString('es-AR',{day:'2-digit',month:'short',year:'2-digit'}) : '—';
+    return `<div class="crm-client-card">
+      <div class="crm-client-header">
+        <div class="crm-client-avatar">${initials}</div>
+        <div class="crm-client-info">
+          <div class="crm-client-name">${escHtml(c.nombre)}</div>
+          <div class="crm-client-channel">${CRM_CHANNELS[c.canal]||c.canal} · Desde ${desde}</div>
+        </div>
+        <div class="crm-client-total">${fmt(c.total)}</div>
+        <button class="crm-client-del" onclick="deleteCrmClient('${c.id}')">✕</button>
+      </div>
+      <div class="crm-client-footer">
+        ${isBest?'<span class="crm-client-tag best">⭐ Mejor cliente</span>':''}
+        ${c.nota?`<span class="crm-client-tag">${escHtml(c.nota)}</span>`:''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function setCrmFilter(f,el){
+  crmFilter=f;
+  document.querySelectorAll('.crm-filter-row .filter-btn').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');
+  renderCrm();
+}
+
+function openCrmModal(id){
+  editingCrmId = id||null;
+  const client = id ? crmClients.find(c=>c.id===id) : null;
+  document.getElementById('crmModalTitle').textContent = client ? '✏️ Editar cliente' : '👤 Nuevo cliente';
+  document.getElementById('crmNombre').value = client?.nombre||'';
+  document.getElementById('crmCanal').value  = client?.canal||'instagram';
+  document.getElementById('crmTotal').value  = client?.total||'';
+  document.getElementById('crmFecha').value  = client?.fecha||toDateInput(new Date());
+  document.getElementById('crmNota').value   = client?.nota||'';
+  document.getElementById('crmModal').classList.add('open');
+}
+
+function closeCrmModal(){
+  document.getElementById('crmModal').classList.remove('open');
+  editingCrmId=null;
+}
+
+function saveCrmClient(){
+  const nombre=document.getElementById('crmNombre').value.trim();
+  const canal =document.getElementById('crmCanal').value;
+  const total =parseFloat(document.getElementById('crmTotal').value||0);
+  const fecha =document.getElementById('crmFecha').value;
+  const nota  =document.getElementById('crmNota').value.trim();
+  if(!nombre){ shakEl(document.getElementById('crmNombre')); return; }
+  if(editingCrmId){
+    const ex=crmClients.find(c=>c.id===editingCrmId);
+    if(ex) Object.assign(ex,{nombre,canal,total,fecha,nota});
+  } else {
+    crmClients.unshift({id:'crm_'+Date.now(),nombre,canal,total,fecha,nota});
+  }
+  setBizData('crmclients', crmClients);
+  closeCrmModal(); renderCrm();
+  showToast(editingCrmId?'✅ Cliente actualizado':'✅ Cliente agregado','green');
+}
+
+function deleteCrmClient(id){
+  if(!confirm('¿Eliminar este cliente?')) return;
+  crmClients=crmClients.filter(c=>c.id!==id);
+  setBizData('crmclients', crmClients);
+  renderCrm();
+  showToast('Cliente eliminado','red');
 }
 
 init();
