@@ -1010,6 +1010,89 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink
   cursor:pointer;margin-top:10px;display:none;transition:background 0.15s;
 }
 .ocr-add-btn:hover{background:#dc2626;}
+/* ── ANÁLISIS TAB ── */
+.analisis-section{margin-bottom:24px;}
+.analisis-section-title{font-weight:700;font-size:0.88rem;margin-bottom:12px;display:flex;align-items:center;gap:7px;color:var(--ink);}
+
+/* DRE */
+.dre-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:10px;}
+.dre-header{padding:14px 16px 10px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.dre-title{font-weight:700;font-size:0.92rem;}
+.dre-period{font-size:0.72rem;color:var(--ink3);font-family:var(--mono);}
+.dre-row{display:flex;align-items:center;padding:11px 16px;border-bottom:1px solid var(--border);gap:10px;}
+.dre-row:last-child{border-bottom:none;}
+.dre-row.subtotal{background:var(--bg3);}
+.dre-row.total{background:var(--surface2);}
+.dre-row.indent{padding-left:28px;}
+.dre-icon{font-size:1rem;flex-shrink:0;width:20px;text-align:center;}
+.dre-label{flex:1;}
+.dre-label-main{font-size:0.86rem;font-weight:500;}
+.dre-label-sub{font-size:0.69rem;color:var(--ink3);margin-top:1px;}
+.dre-row.subtotal .dre-label-main,.dre-row.total .dre-label-main{font-weight:700;}
+.dre-val{font-family:var(--mono);font-weight:700;font-size:0.9rem;text-align:right;}
+.dre-val.green{color:var(--green);}
+.dre-val.red{color:var(--red);}
+.dre-val.amber{color:var(--amber);}
+.dre-val.blue{color:var(--blue);}
+.dre-val.muted{color:var(--ink3);}
+.dre-bar{height:3px;background:var(--bg);margin:0;}
+.dre-margin-bar{height:2px;background:var(--surface3);border-radius:1px;overflow:hidden;margin:0 16px 10px;}
+.dre-margin-fill{height:100%;border-radius:1px;transition:width 0.5s;}
+
+/* KPIs */
+.kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;}
+.kpi-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:13px;}
+.kpi-card.wide{grid-column:1/-1;}
+.kpi-icon{font-size:1.1rem;margin-bottom:5px;}
+.kpi-label{font-size:0.68rem;color:var(--ink3);font-weight:600;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:3px;}
+.kpi-value{font-family:var(--mono);font-weight:700;font-size:1.15rem;}
+.kpi-value.green{color:var(--green);}
+.kpi-value.red{color:var(--red);}
+.kpi-value.amber{color:var(--amber);}
+.kpi-value.blue{color:var(--blue);}
+.kpi-delta{font-size:0.72rem;margin-top:3px;display:flex;align-items:center;gap:3px;}
+.kpi-delta.up{color:var(--green);}
+.kpi-delta.down{color:var(--red);}
+.kpi-delta.flat{color:var(--ink3);}
+.kpi-trend-bar{height:28px;margin-top:10px;}
+
+/* Break-even */
+.be-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:10px;}
+.be-result-box{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px;margin-top:12px;}
+.be-result-row{display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border);font-size:0.84rem;}
+.be-result-row:last-child{border-bottom:none;}
+.be-result-label{color:var(--ink2);}
+.be-result-val{font-family:var(--mono);font-weight:700;}
+.be-status{border-radius:var(--radius-sm);padding:10px 14px;margin-top:10px;font-size:0.82rem;font-weight:600;text-align:center;}
+.be-status.ok{background:var(--green-dim);color:var(--green);border:1px solid var(--green-mid);}
+.be-status.warn{background:var(--amber-dim);color:var(--amber);border:1px solid rgba(245,158,11,0.3);}
+.be-status.danger{background:var(--red-dim);color:var(--red);border:1px solid var(--red-mid);}
+.be-progress-wrap{margin-top:12px;}
+.be-progress-label{font-size:0.69rem;color:var(--ink3);margin-bottom:5px;display:flex;justify-content:space-between;}
+.be-progress-track{height:8px;background:var(--surface3);border-radius:4px;overflow:hidden;}
+.be-progress-fill{height:100%;border-radius:4px;transition:width 0.5s;}
+
+/* Meta mensual */
+.meta-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:10px;}
+.meta-input-row{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.meta-input-label{flex:1;font-size:0.84rem;color:var(--ink2);font-weight:500;}
+.meta-input-wrap{display:flex;align-items:center;gap:5px;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius-sm);padding:7px 10px;}
+.meta-input-wrap span{font-size:0.82rem;color:var(--ink3);}
+.meta-input{width:100px;text-align:right;border:none;background:none;font-family:var(--mono);font-size:0.92rem;font-weight:700;color:var(--ink);outline:none;}
+.meta-progress-wrap{margin-bottom:10px;}
+.meta-progress-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;}
+.meta-progress-pct{font-family:var(--mono);font-weight:700;font-size:1.4rem;}
+.meta-progress-pct.ok{color:var(--green);}
+.meta-progress-pct.warn{color:var(--amber);}
+.meta-progress-pct.danger{color:var(--red);}
+.meta-progress-sub{font-size:0.74rem;color:var(--ink3);}
+.meta-track{height:10px;background:var(--surface3);border-radius:5px;overflow:hidden;}
+.meta-fill{height:100%;border-radius:5px;transition:width 0.5s;}
+.meta-stats-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:12px;}
+.meta-stat{text-align:center;background:var(--bg3);border-radius:var(--radius-sm);padding:10px 6px;border:1px solid var(--border);}
+.meta-stat-label{font-size:0.67rem;color:var(--ink3);font-weight:500;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;}
+.meta-stat-val{font-family:var(--mono);font-weight:700;font-size:0.92rem;}
+
 /* OCR quick trigger in quick-bar */
 .qb-ocr-btn{
   padding:9px 14px;border:1px dashed var(--border2);border-radius:var(--radius-sm);
@@ -1066,6 +1149,10 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink
   <button class="tab-btn" onclick="switchTab('impuestos',this)" id="tabImpuestosBtn">
     <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"><path d="M2 11L6.5 2L11 11"/><path d="M3.5 8h6"/></svg>
     Impuestos
+  </button>
+  <button class="tab-btn" onclick="switchTab('analisis',this)" id="tabAnalisisBtn">
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"><path d="M1 12 L4 7 L7 9 L10 4 L12 6"/><circle cx="10" cy="4" r="1.5" fill="currentColor" stroke="none"/></svg>
+    Análisis
   </button>
   <button class="tab-btn" onclick="switchTab('ajustes',this)" id="tabAjustesBtn">
     <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"><circle cx="6.5" cy="6.5" r="2"/><path d="M6.5 1v1.5M6.5 10v1.5M1 6.5h1.5M10 6.5H11.5M2.5 2.5l1 1M9 9l1 1M9 2.5l-1 1M3.5 9l-1 1"/></svg>
@@ -1399,6 +1486,138 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink
     <div class="calc-breakdown" id="calcBreakdown" style="display:none"></div>
     <div class="info-pill" style="margin-top:10px;margin-bottom:0">
       ⚠️ <strong>Estos son estimados orientativos</strong>, no reemplaza a tu contador. Los porcentajes varían según tu situación particular.
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════ TAB ANÁLISIS ═══════════ -->
+<div class="tab-panel" id="tab-analisis">
+
+  <!-- Month selector -->
+  <div class="month-strip" style="margin-bottom:18px">
+    <button class="month-arrow" onclick="changeMonth(-1);renderAnalisis()">‹</button>
+    <div class="month-label" id="monthLabelAnalisis">—</div>
+    <button class="month-arrow" onclick="changeMonth(1);renderAnalisis()">›</button>
+  </div>
+
+  <!-- 1. DRE MENSUAL -->
+  <div class="analisis-section">
+    <div class="analisis-section-title">📊 DRE — Estado de Resultados</div>
+    <div id="dreCard"></div>
+    <div class="info-pill">
+      💡 El <strong>DRE</strong> muestra cómo se convirtieron tus ingresos en ganancia real, paso a paso.
+    </div>
+  </div>
+
+  <!-- 2. KPIs -->
+  <div class="analisis-section">
+    <div class="analisis-section-title">⚡ Indicadores Clave (KPIs)</div>
+    <div class="kpi-grid" id="kpiGrid"></div>
+    <div class="chart-card" style="margin-top:8px">
+      <div class="chart-title">Tendencia — últimos 6 meses</div>
+      <div class="chart-desc">Ingresos vs Gastos vs Margen neto</div>
+      <div id="kpiTrendWrap"><canvas id="kpiTrendChart" height="160"></canvas></div>
+    </div>
+  </div>
+
+  <!-- 3. PUNTO DE EQUILIBRIO -->
+  <div class="analisis-section">
+    <div class="analisis-section-title">⚖️ Punto de Equilibrio (Break-even)</div>
+    <div class="be-card">
+      <div style="font-size:0.82rem;color:var(--ink2);margin-bottom:14px;line-height:1.5">
+        ¿Cuánto tenés que vender para no perder? Completá o verificá tus datos:
+      </div>
+      <div class="calc-input-row">
+        <div class="calc-input-label">Costos fijos del mes <span style="color:var(--ink3)">(alquiler, sueldos fijos…)</span></div>
+        <div class="calc-input-wrap">
+          <span class="calc-input-suffix">$</span>
+          <input class="calc-input" id="beFixedCosts" type="number" min="0" step="100" placeholder="0" oninput="renderBreakeven()" style="width:110px">
+        </div>
+      </div>
+      <div class="calc-input-row">
+        <div class="calc-input-label">Margen promedio de tus productos <span style="color:var(--ink3)">(% de ganancia)</span></div>
+        <div class="calc-input-wrap">
+          <input class="calc-input" id="beMarginPct" type="number" min="1" max="100" step="1" placeholder="30" oninput="renderBreakeven()" style="width:70px">
+          <span class="calc-input-suffix">%</span>
+        </div>
+      </div>
+      <div id="beResult" style="display:none">
+        <div class="be-result-box">
+          <div class="be-result-row">
+            <span class="be-result-label">Necesitás vender al menos</span>
+            <span class="be-result-val" id="beMinVentas" style="color:var(--accent)">—</span>
+          </div>
+          <div class="be-result-row">
+            <span class="be-result-label">Tus ingresos reales este mes</span>
+            <span class="be-result-val" id="beRealIngresos">—</span>
+          </div>
+          <div class="be-result-row">
+            <span class="be-result-label">Diferencia</span>
+            <span class="be-result-val" id="beDiff">—</span>
+          </div>
+        </div>
+        <div id="beProgressWrap" class="be-progress-wrap">
+          <div class="be-progress-label">
+            <span>0%</span><span id="bePctLabel">0% del objetivo</span><span>100%+</span>
+          </div>
+          <div class="be-progress-track">
+            <div class="be-progress-fill" id="beProgressFill" style="width:0%"></div>
+          </div>
+        </div>
+        <div class="be-status" id="beStatus">—</div>
+      </div>
+    </div>
+    <div class="info-pill">
+      💡 Si tus ingresos del mes superan el punto de equilibrio, el negocio <strong>no perdió dinero</strong>. Todo lo que sigue es ganancia.
+    </div>
+  </div>
+
+  <!-- 4. META MENSUAL -->
+  <div class="analisis-section">
+    <div class="analisis-section-title">🎯 Meta Mensual de Ingresos</div>
+    <div class="meta-card">
+      <div class="meta-input-row">
+        <span class="meta-input-label">Meta de ingresos para este mes</span>
+        <div class="meta-input-wrap">
+          <span>$</span>
+          <input class="meta-input" id="metaInput" type="number" min="0" step="100" placeholder="0" oninput="saveMeta();renderMeta()">
+        </div>
+      </div>
+      <div id="metaContent" style="display:none">
+        <div class="meta-progress-wrap">
+          <div class="meta-progress-header">
+            <div>
+              <div class="meta-progress-pct" id="metaPct">0%</div>
+              <div class="meta-progress-sub" id="metaSubtitle">de la meta alcanzado</div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-family:var(--mono);font-weight:700;font-size:0.92rem" id="metaActual">$0</div>
+              <div style="font-size:0.72rem;color:var(--ink3)">de <span id="metaGoal">$0</span></div>
+            </div>
+          </div>
+          <div class="meta-track">
+            <div class="meta-fill" id="metaFill" style="width:0%"></div>
+          </div>
+        </div>
+        <div class="meta-stats-row">
+          <div class="meta-stat">
+            <div class="meta-stat-label">Faltan</div>
+            <div class="meta-stat-val" id="metaFalta">—</div>
+          </div>
+          <div class="meta-stat">
+            <div class="meta-stat-label">Días hábiles restantes</div>
+            <div class="meta-stat-val" id="metaDiasRest">—</div>
+          </div>
+          <div class="meta-stat">
+            <div class="meta-stat-label">Promedio diario necesario</div>
+            <div class="meta-stat-val" id="metaPromDia">—</div>
+          </div>
+        </div>
+      </div>
+      <div id="metaEmpty" style="text-align:center;padding:14px 0;color:var(--ink3);font-size:0.82rem">
+        Ingresá una meta para ver tu progreso
+      </div>
     </div>
   </div>
 
@@ -1944,6 +2163,15 @@ function init() {
   // Init inventory
   document.getElementById('invEnabled').checked = invEnabled;
   if(invEnabled) document.getElementById('invContent').style.display = 'block';
+  // Init analisis pre-fill
+  setTimeout(()=>{
+    const bfc = document.getElementById('beFixedCosts');
+    const bmp = document.getElementById('beMarginPct');
+    if(bfc) bfc.value = beFixedCostsVal || fixedCosts || '';
+    if(bmp) bmp.value = beMarginPctVal  || minMargin  || '';
+    const mi = document.getElementById('metaInput');
+    if(mi) mi.value = metas[metaKey()] || '';
+  }, 50);
 }
 
 function toDateInput(d){ return d.toISOString().split('T')[0]; }
@@ -2532,6 +2760,7 @@ function switchTab(id,btn){
   if(id==='flujo')      renderCashFlow();
   if(id==='inventario') renderInventario();
   if(id==='impuestos')  renderImpuestos();
+  if(id==='analisis')   renderAnalisis();
   if(id==='ajustes')    renderSettingsTab();
 }
 
@@ -2716,6 +2945,14 @@ let editingInvProdId = null;
 let invMovTargetId   = null;
 let invMovType       = 'entrada';
 let invMovFilter     = 'all';
+
+// ═══════════════════════════════════════════
+// ANÁLISIS STATE
+// ═══════════════════════════════════════════
+let kpiTrendChartInst = null;
+let metas = getBizData('metas', '{}'); // { "YYYY-MM": number }
+let beFixedCostsVal = parseFloat(localStorage.getItem(getBizKey('be_fixed')) || fixedCosts || '0');
+let beMarginPctVal  = parseFloat(localStorage.getItem(getBizKey('be_margin')) || minMargin || '30');
 
 function saveInv(){
   setBizData('inv_products', invProducts);
@@ -3396,7 +3633,7 @@ function exportJSON(){
     businessName: bizName,
     transactions, cfItems, products, minMargin, fixedCosts,
     invEnabled, invProducts, invMovements,
-    fiscObs, fiscPayments, fiscAlertDays
+    fiscObs, fiscPayments, fiscAlertDays, metas
   };
   downloadFile(
     `finsimple_${bizName.replace(/\s+/g,'_')}_${toDateInput(new Date())}.json`,
@@ -3442,7 +3679,8 @@ function importJSON(event){
       invMovements = data.invMovements||[];
       fiscObs      = data.fiscObs||[];
       fiscPayments = data.fiscPayments||[];
-      save(); saveCfItems(); setBizData('products',products); saveInv(); saveFisc();
+      metas        = data.metas||{};
+      save(); saveCfItems(); setBizData('products',products); saveInv(); saveFisc(); setBizData('metas',metas);
       render(); renderInventario(); renderImpuestos();
       showToast('✅ Backup restaurado', 'green');
     } catch(err){
@@ -3569,6 +3807,310 @@ function renderSettingsTab(){
   const isLight=document.body.classList.contains('light');
   const d=document.getElementById('themeDesc');
   if(d) d.textContent='Actualmente: '+(isLight?'claro':'oscuro');
+}
+
+// ═══════════════════════════════════════════
+// ANÁLISIS TAB — MAIN RENDER
+// ═══════════════════════════════════════════
+function renderAnalisis(){
+  updateMonthLabels();
+  const el = document.getElementById('monthLabelAnalisis');
+  if(el) el.textContent = MONTHS[currentMonth]+' '+currentYear;
+  renderDRE();
+  renderKPIs();
+  renderBreakeven();
+  renderMeta();
+}
+
+// ─── DRE ───────────────────────────────────
+function renderDRE(){
+  const monthly = transactions.filter(inCurrentMonth);
+  const income  = monthly.filter(t=>t.type==='income').reduce((s,t)=>s+t.amount,0);
+  const expenses = monthly.filter(t=>t.type==='expense').reduce((s,t)=>s+t.amount,0);
+
+  // Breakdown by category
+  const expByCat = {};
+  monthly.filter(t=>t.type==='expense').forEach(t=>{ expByCat[t.cat]=(expByCat[t.cat]||0)+t.amount; });
+  const costoVentas   = (expByCat['insumos']||0);
+  const gastosOper    = expenses - costoVentas;
+  const lucroBruto    = income - costoVentas;
+  const lucroOper     = lucroBruto - gastosOper;
+  const lucroNeto     = lucroOper; // no impuestos separados aún
+  const margenBruto   = income>0 ? (lucroBruto/income*100) : 0;
+  const margenNeto    = income>0 ? (lucroNeto/income*100)  : 0;
+
+  function dreRow(icon, label, sub, val, cls, indent=false){
+    const isNeg = val < 0;
+    const valStr = (isNeg ? '−' : '') + fmt(Math.abs(val));
+    return `<div class="dre-row${indent?' indent':''}">
+      <div class="dre-icon">${icon}</div>
+      <div class="dre-label">
+        <div class="dre-label-main">${label}</div>
+        ${sub?`<div class="dre-label-sub">${sub}</div>`:''}
+      </div>
+      <div class="dre-val ${cls}">${valStr}</div>
+    </div>`;
+  }
+  function dreSubtotal(icon, label, sub, val, cls){
+    const isNeg = val < 0;
+    const valStr = (isNeg ? '−' : '') + fmt(Math.abs(val));
+    return `<div class="dre-row subtotal">
+      <div class="dre-icon">${icon}</div>
+      <div class="dre-label">
+        <div class="dre-label-main">${label}</div>
+        ${sub?`<div class="dre-label-sub">${sub}</div>`:''}
+      </div>
+      <div class="dre-val ${cls}">${valStr}</div>
+    </div>
+    <div class="dre-margin-bar"><div class="dre-margin-fill" style="width:${Math.min(100,Math.max(0,margenBruto))}%;background:var(--green)"></div></div>`;
+  }
+
+  const netCls = lucroNeto > 0 ? 'green' : lucroNeto < 0 ? 'red' : 'muted';
+
+  document.getElementById('dreCard').innerHTML = `
+    <div class="dre-card">
+      <div class="dre-header">
+        <div class="dre-title">DRE — Demostração de Resultados</div>
+        <div class="dre-period">${MONTHS[currentMonth]} ${currentYear}</div>
+      </div>
+      ${dreRow('↑','Ingresos Brutos','Ventas + servicios del período', income, 'green')}
+      <div class="dre-bar"></div>
+      ${dreRow('📦','(−) Costo de Ventas','Insumos y materiales directos', -costoVentas, 'red', true)}
+      ${dreSubtotal('◈','Lucro Bruto',`Margen bruto: ${margenBruto.toFixed(1)}%`, lucroBruto, lucroBruto>=0?'green':'red')}
+      ${dreRow('🏠','(−) Gastos Operativos','Alquiler, sueldos, otros', -gastosOper, 'red', true)}
+      <div class="dre-bar"></div>
+      <div class="dre-row subtotal">
+        <div class="dre-icon">⚙️</div>
+        <div class="dre-label"><div class="dre-label-main">Lucro Operacional</div><div class="dre-label-sub">Antes de impuestos y financiero</div></div>
+        <div class="dre-val ${lucroOper>=0?'green':'red'}">${(lucroOper<0?'−':'')+fmt(Math.abs(lucroOper))}</div>
+      </div>
+      <div class="dre-bar"></div>
+      <div class="dre-row total" style="background:var(--surface2)">
+        <div class="dre-icon">${lucroNeto>=0?'✅':'❌'}</div>
+        <div class="dre-label">
+          <div class="dre-label-main" style="font-size:0.96rem">Lucro Neto</div>
+          <div class="dre-label-sub">Margen neto: ${margenNeto.toFixed(1)}%</div>
+        </div>
+        <div class="dre-val ${netCls}" style="font-size:1.1rem">${(lucroNeto<0?'−':'')+fmt(Math.abs(lucroNeto))}</div>
+      </div>
+    </div>`;
+}
+
+// ─── KPIs ───────────────────────────────────
+function renderKPIs(){
+  const monthly  = transactions.filter(inCurrentMonth);
+  const income   = monthly.filter(t=>t.type==='income').reduce((s,t)=>s+t.amount,0);
+  const expenses = monthly.filter(t=>t.type==='expense').reduce((s,t)=>s+t.amount,0);
+  const net      = income - expenses;
+  const margenPct= income>0 ? (net/income*100) : 0;
+  const incTxs   = monthly.filter(t=>t.type==='income');
+  const ticketProm = incTxs.length > 0 ? income/incTxs.length : 0;
+
+  // Previous month for delta
+  let pm = currentMonth-1, py = currentYear;
+  if(pm<0){pm=11;py--;}
+  const prevTxs   = transactions.filter(t=>{ const d=new Date(t.date+'T12:00:00'); return d.getMonth()===pm&&d.getFullYear()===py; });
+  const prevInc   = prevTxs.filter(t=>t.type==='income').reduce((s,t)=>s+t.amount,0);
+  const prevExp   = prevTxs.filter(t=>t.type==='expense').reduce((s,t)=>s+t.amount,0);
+  const prevNet   = prevInc - prevExp;
+  const prevMargen= prevInc>0 ? (prevNet/prevInc*100) : 0;
+  const prevTicket= prevTxs.filter(t=>t.type==='income').length > 0 ? prevInc/prevTxs.filter(t=>t.type==='income').length : 0;
+
+  function delta(curr, prev, isMoney=true, higherIsBetter=true){
+    if(prev===0) return `<span class="kpi-delta flat">— sin datos previos</span>`;
+    const diff = curr - prev;
+    const pct  = Math.abs(diff/prev*100).toFixed(1);
+    const up   = diff >= 0;
+    const good = higherIsBetter ? up : !up;
+    const arrow= up ? '↑' : '↓';
+    const cls  = good ? 'up' : 'down';
+    const valStr = isMoney ? fmt(Math.abs(diff)) : Math.abs(diff).toFixed(1)+'%';
+    return `<span class="kpi-delta ${cls}">${arrow} ${valStr} (${pct}%) vs mes anterior</span>`;
+  }
+
+  document.getElementById('kpiGrid').innerHTML = `
+    <div class="kpi-card">
+      <div class="kpi-icon">💰</div>
+      <div class="kpi-label">Ingresos del mes</div>
+      <div class="kpi-value ${income>0?'green':'muted'}">${fmt(income)}</div>
+      ${delta(income, prevInc)}
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon">💸</div>
+      <div class="kpi-label">Gastos del mes</div>
+      <div class="kpi-value ${expenses>0?'red':'muted'}">${fmt(expenses)}</div>
+      ${delta(expenses, prevExp, true, false)}
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon">📈</div>
+      <div class="kpi-label">Margen neto</div>
+      <div class="kpi-value ${margenPct>20?'green':margenPct>0?'amber':'red'}">${margenPct.toFixed(1)}%</div>
+      ${delta(margenPct, prevMargen, false)}
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon">🎫</div>
+      <div class="kpi-label">Ticket promedio</div>
+      <div class="kpi-value blue">${ticketProm>0?fmt(ticketProm):'—'}</div>
+      ${delta(ticketProm, prevTicket)}
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon">🔢</div>
+      <div class="kpi-label">Cantidad de ventas</div>
+      <div class="kpi-value">${incTxs.length}</div>
+      <span class="kpi-delta flat">${prevTxs.filter(t=>t.type==='income').length} el mes anterior</span>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon">◈</div>
+      <div class="kpi-label">Resultado neto</div>
+      <div class="kpi-value ${net>0?'green':net<0?'red':'muted'}">${fmt(net)}</div>
+      ${delta(net, prevNet)}
+    </div>
+  `;
+
+  // Trend chart
+  const periods = [];
+  for(let i=5;i>=0;i--){
+    let m=currentMonth-i, y=currentYear;
+    while(m<0){m+=12;y--;}
+    periods.push({month:m,year:y,label:MONTHS_SHORT[m]+" '"+String(y).slice(2)});
+  }
+  const tInc=[], tExp=[], tNet=[];
+  periods.forEach(p=>{
+    const txs=transactions.filter(t=>{ const d=new Date(t.date+'T12:00:00'); return d.getMonth()===p.month&&d.getFullYear()===p.year; });
+    const i=txs.filter(t=>t.type==='income').reduce((s,t)=>s+t.amount,0);
+    const e=txs.filter(t=>t.type==='expense').reduce((s,t)=>s+t.amount,0);
+    tInc.push(i); tExp.push(e); tNet.push(parseFloat((i-e).toFixed(2)));
+  });
+  if(kpiTrendChartInst) kpiTrendChartInst.destroy();
+  const wrap=document.getElementById('kpiTrendWrap');
+  wrap.innerHTML='<canvas id="kpiTrendChart" height="160"></canvas>';
+  const ctx=document.getElementById('kpiTrendChart').getContext('2d');
+  kpiTrendChartInst=new Chart(ctx,{
+    type:'line',
+    data:{
+      labels:periods.map(p=>p.label),
+      datasets:[
+        {label:'Ingresos',data:tInc,borderColor:'#22C55E',backgroundColor:'rgba(34,197,94,0.07)',borderWidth:2,pointRadius:3,tension:0.3,fill:false},
+        {label:'Gastos',  data:tExp,borderColor:'#EF4444',backgroundColor:'rgba(239,68,68,0.07)',borderWidth:2,pointRadius:3,tension:0.3,fill:false},
+        {label:'Resultado',data:tNet,borderColor:'#A78BFA',backgroundColor:'rgba(167,139,250,0.10)',borderWidth:2,pointRadius:3,tension:0.3,fill:true}
+      ]
+    },
+    options:{
+      responsive:true,
+      plugins:{
+        legend:{labels:{font:{family:'Space Grotesk',size:10},color:'#8A8A96',boxWidth:9,boxHeight:9,padding:12}},
+        tooltip:{backgroundColor:'rgba(20,20,28,0.95)',borderColor:'rgba(255,255,255,0.08)',borderWidth:1,padding:9,
+          titleFont:{family:'JetBrains Mono',size:10},bodyFont:{family:'Space Grotesk',size:11},
+          callbacks:{label:c=>' '+c.dataset.label+': '+fmt(c.parsed.y)}}
+      },
+      scales:{
+        x:{grid:{display:false},ticks:{font:{family:'Space Grotesk',size:10},color:'#5A5A66'}},
+        y:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{font:{family:'JetBrains Mono',size:10},color:'#5A5A66',callback:v=>(v<0?'-':'')+'$'+(Math.abs(v)>=1000?(Math.abs(v)/1000).toFixed(1)+'k':Math.abs(v))}}
+      }
+    }
+  });
+}
+
+// ─── BREAK-EVEN ────────────────────────────
+function renderBreakeven(){
+  const fc    = parseFloat(document.getElementById('beFixedCosts')?.value||beFixedCostsVal||0);
+  const mp    = parseFloat(document.getElementById('beMarginPct')?.value||beMarginPctVal||0);
+  // Save
+  if(!isNaN(fc)){ beFixedCostsVal=fc; localStorage.setItem(getBizKey('be_fixed'), fc); }
+  if(!isNaN(mp)){ beMarginPctVal=mp;  localStorage.setItem(getBizKey('be_margin'), mp); }
+
+  const resultEl = document.getElementById('beResult');
+  if(!resultEl) return;
+  if(!fc || !mp || mp<=0){ resultEl.style.display='none'; return; }
+
+  const minVentas = fc / (mp/100);
+  const monthly   = transactions.filter(inCurrentMonth);
+  const realInc   = monthly.filter(t=>t.type==='income').reduce((s,t)=>s+t.amount,0);
+  const diff      = realInc - minVentas;
+  const pct       = Math.min(150, minVentas>0 ? (realInc/minVentas*100) : 0);
+
+  resultEl.style.display = 'block';
+  document.getElementById('beMinVentas').textContent = fmt(minVentas);
+  document.getElementById('beRealIngresos').textContent = fmt(realInc);
+  document.getElementById('beDiff').textContent = (diff>=0?'+':'')+fmt(diff);
+  document.getElementById('beDiff').style.color = diff>=0?'var(--green)':'var(--red)';
+  document.getElementById('bePctLabel').textContent = pct.toFixed(0)+'% del objetivo';
+
+  const fill = document.getElementById('beProgressFill');
+  const fillPct = Math.min(100, pct);
+  fill.style.width = fillPct+'%';
+  fill.style.background = pct>=100 ? 'var(--green)' : pct>=70 ? 'var(--amber)' : 'var(--red)';
+
+  const statusEl = document.getElementById('beStatus');
+  if(pct >= 100){
+    statusEl.className='be-status ok';
+    statusEl.textContent = '✅ Superaste el punto de equilibrio — el negocio no perdió este mes';
+  } else if(pct >= 70){
+    statusEl.className='be-status warn';
+    statusEl.textContent = `⚠️ Vas por el ${pct.toFixed(0)}% — falta ${fmt(minVentas-realInc)} para no perder`;
+  } else {
+    statusEl.className='be-status danger';
+    statusEl.textContent = `🔴 Solo cubrís el ${pct.toFixed(0)}% del mínimo — revisá tus costos fijos`;
+  }
+}
+
+// ─── META MENSUAL ──────────────────────────
+function metaKey(){ return `${currentYear}-${String(currentMonth+1).padStart(2,'0')}`; }
+
+function saveMeta(){
+  const v = parseFloat(document.getElementById('metaInput')?.value||0);
+  if(!isNaN(v) && v >= 0){
+    metas[metaKey()] = v;
+    setBizData('metas', metas);
+  }
+}
+
+function renderMeta(){
+  const metaInputEl = document.getElementById('metaInput');
+  const contentEl   = document.getElementById('metaContent');
+  const emptyEl     = document.getElementById('metaEmpty');
+  if(!metaInputEl) return;
+
+  const savedMeta = metas[metaKey()] || 0;
+  metaInputEl.value = savedMeta || '';
+
+  if(!savedMeta || savedMeta <= 0){
+    contentEl.style.display='none';
+    emptyEl.style.display='block';
+    return;
+  }
+  contentEl.style.display='block';
+  emptyEl.style.display='none';
+
+  const monthly = transactions.filter(inCurrentMonth);
+  const realInc = monthly.filter(t=>t.type==='income').reduce((s,t)=>s+t.amount,0);
+  const pct     = Math.min(150, realInc/savedMeta*100);
+  const falta   = Math.max(0, savedMeta - realInc);
+
+  // Days remaining in month
+  const now   = new Date();
+  const lastDay = new Date(currentYear, currentMonth+1, 0).getDate();
+  const diasRest= currentMonth===now.getMonth()&&currentYear===now.getFullYear()
+    ? lastDay - now.getDate()
+    : 0;
+  const promDia = diasRest > 0 ? falta/diasRest : 0;
+
+  const pctEl  = document.getElementById('metaPct');
+  const pctCls = pct>=100?'ok':pct>=60?'warn':'danger';
+  pctEl.textContent = pct.toFixed(0)+'%';
+  pctEl.className   = 'meta-progress-pct '+pctCls;
+
+  document.getElementById('metaSubtitle').textContent = pct>=100 ? '¡Meta alcanzada! 🎉' : 'de la meta alcanzado';
+  document.getElementById('metaActual').textContent   = fmt(realInc);
+  document.getElementById('metaGoal').textContent     = fmt(savedMeta);
+
+  const fillEl = document.getElementById('metaFill');
+  fillEl.style.width      = Math.min(100, pct)+'%';
+  fillEl.style.background = pct>=100?'var(--green)':pct>=60?'var(--amber)':'var(--red)';
+
+  document.getElementById('metaFalta').textContent   = pct>=100 ? '✅ Lograda' : fmt(falta);
+  document.getElementById('metaDiasRest').textContent= diasRest > 0 ? diasRest+' días' : '—';
+  document.getElementById('metaPromDia').textContent  = diasRest>0 && falta>0 ? fmt(promDia)+'/día' : '—';
 }
 
 init();
