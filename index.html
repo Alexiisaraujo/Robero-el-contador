@@ -1200,6 +1200,149 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink
 .crm-client-tag.best{background:var(--green-dim);color:var(--green);}
 .btn-add-client{width:100%;padding:13px;border:1.5px dashed var(--accent);border-radius:var(--radius-sm);background:none;color:var(--accent);font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.85rem;cursor:pointer;transition:all 0.15s;margin-bottom:14px;display:flex;align-items:center;justify-content:center;gap:8px;}
 .btn-add-client:hover{background:var(--blue-dim);}
+
+/* ── CONCILIACIÓN ── */
+.conc-summary{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:14px;}
+.conc-stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px 10px;text-align:center;}
+.conc-stat-label{font-size:0.67rem;color:var(--ink3);font-weight:500;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;}
+.conc-stat-val{font-family:var(--mono);font-weight:700;font-size:1rem;}
+.conc-stat-val.ok{color:var(--green);}
+.conc-stat-val.warn{color:var(--amber);}
+.conc-stat-val.bad{color:var(--red);}
+.conc-filter-row{display:flex;gap:5px;margin-bottom:12px;flex-wrap:wrap;}
+.conc-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px 12px;margin-bottom:6px;display:flex;align-items:center;gap:10px;animation:fadeUp 0.2s ease;transition:border-color 0.15s;}
+.conc-item.conciliado{border-left:3px solid var(--green);}
+.conc-item.discrepancia{border-left:3px solid var(--red);}
+.conc-item.pendiente{border-left:3px solid var(--amber);}
+.conc-item-icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0;}
+.conc-item-icon.inc{background:var(--green-dim);}
+.conc-item-icon.exp{background:var(--red-dim);}
+.conc-item-info{flex:1;min-width:0;}
+.conc-item-desc{font-weight:500;font-size:0.87rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.conc-item-meta{font-size:0.7rem;color:var(--ink3);margin-top:2px;}
+.conc-item-amount{font-family:var(--mono);font-weight:700;font-size:0.88rem;flex-shrink:0;text-align:right;}
+.conc-item-amount.inc{color:var(--green);}
+.conc-item-amount.exp{color:var(--red);}
+.conc-status-btn{flex-shrink:0;padding:5px 10px;border-radius:20px;border:1.5px solid var(--border2);background:none;font-size:0.72rem;font-weight:600;cursor:pointer;font-family:'Space Grotesk',sans-serif;transition:all 0.15s;white-space:nowrap;}
+.conc-status-btn.pendiente{color:var(--amber);border-color:rgba(245,158,11,0.4);}
+.conc-status-btn.conciliado{color:var(--green);border-color:var(--green-mid);background:var(--green-dim);}
+.conc-status-btn.discrepancia{color:var(--red);border-color:var(--red-mid);background:var(--red-dim);}
+.conc-note-input{width:100%;padding:5px 8px;font-size:0.78rem;background:var(--bg3);border:1px solid var(--border2);border-radius:5px;color:var(--ink);font-family:'Space Grotesk',sans-serif;outline:none;margin-top:5px;}
+.conc-note-input:focus{border-color:var(--accent);}
+
+/* ── EMBUDO DE VENTAS ── */
+.embudo-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:14px;}
+.embudo-title{font-weight:700;font-size:0.92rem;margin-bottom:4px;display:flex;align-items:center;gap:8px;}
+.embudo-desc{font-size:0.75rem;color:var(--ink3);margin-bottom:14px;line-height:1.5;}
+.embudo-stages{display:flex;flex-direction:column;gap:10px;margin-bottom:16px;}
+.embudo-stage{position:relative;}
+.embudo-stage-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:5px;}
+.embudo-stage-label{font-size:0.82rem;font-weight:600;display:flex;align-items:center;gap:7px;}
+.embudo-stage-count{font-family:var(--mono);font-weight:700;font-size:1.1rem;}
+.embudo-stage-pct{font-size:0.72rem;color:var(--ink3);font-family:var(--mono);}
+.embudo-bar-track{height:28px;background:var(--bg3);border-radius:var(--radius-sm);overflow:hidden;position:relative;}
+.embudo-bar-fill{height:100%;border-radius:var(--radius-sm);display:flex;align-items:center;padding-left:10px;transition:width 0.5s ease;}
+.embudo-bar-fill span{font-family:var(--mono);font-weight:700;font-size:0.78rem;color:white;white-space:nowrap;}
+.embudo-conv{display:flex;align-items:center;gap:5px;font-size:0.74rem;color:var(--ink3);padding:4px 0;}
+.embudo-conv-arrow{color:var(--ink3);}
+.embudo-conv-rate{font-family:var(--mono);font-weight:700;}
+.embudo-conv-rate.ok{color:var(--green);}
+.embudo-conv-rate.warn{color:var(--amber);}
+.embudo-conv-rate.bad{color:var(--red);}
+.embudo-kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;}
+.embudo-kpi{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px 12px;}
+.embudo-kpi-label{font-size:0.68rem;color:var(--ink3);font-weight:600;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:3px;}
+.embudo-kpi-val{font-family:var(--mono);font-weight:700;font-size:1.1rem;}
+.embudo-kpi-val.green{color:var(--green);}
+.embudo-kpi-val.amber{color:var(--amber);}
+.embudo-kpi-val.red{color:var(--red);}
+.embudo-hist-item{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px;margin-bottom:6px;}
+.embudo-hist-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;}
+.embudo-hist-month{font-weight:600;font-size:0.84rem;}
+.embudo-hist-conv{font-family:var(--mono);font-weight:700;font-size:0.84rem;color:var(--green);}
+.embudo-hist-row{display:flex;gap:12px;font-size:0.73rem;color:var(--ink3);}
+
+/* ── CHECKLISTS ── */
+.ck-template-selector{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;}
+.ck-tpl-btn{padding:7px 13px;border:1.5px solid var(--border2);border-radius:20px;background:none;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:0.78rem;color:var(--ink3);cursor:pointer;transition:all 0.15s;}
+.ck-tpl-btn.active{background:var(--accent);color:white;border-color:var(--accent);}
+.ck-tpl-btn:hover:not(.active){background:var(--surface2);color:var(--ink2);}
+.ck-progress-bar{height:6px;background:var(--surface3);border-radius:3px;overflow:hidden;margin-bottom:10px;}
+.ck-progress-fill{height:100%;border-radius:3px;background:var(--green);transition:width 0.4s;}
+.ck-progress-label{display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink3);margin-bottom:5px;}
+.ck-list{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;}
+.ck-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px 12px;display:flex;align-items:center;gap:10px;transition:all 0.15s;animation:fadeUp 0.15s ease;}
+.ck-item.done{opacity:0.55;}
+.ck-item.done .ck-item-text{text-decoration:line-through;color:var(--ink3);}
+.ck-check{width:22px;height:22px;border-radius:6px;border:1.5px solid var(--border2);background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.75rem;transition:all 0.15s;flex-shrink:0;}
+.ck-check:hover{border-color:var(--green);background:var(--green-dim);}
+.ck-check.checked{border-color:var(--green);background:var(--green);color:#000;}
+.ck-item-text{flex:1;font-size:0.88rem;font-weight:500;line-height:1.3;}
+.ck-item-del{background:none;border:none;color:var(--ink3);font-size:0.85rem;cursor:pointer;padding:3px;border-radius:5px;flex-shrink:0;}
+.ck-item-del:hover{color:var(--red);background:var(--red-dim);}
+.ck-add-row{display:flex;gap:8px;margin-bottom:12px;}
+.ck-add-input{flex:1;padding:10px 12px;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius-sm);color:var(--ink);font-family:'Space Grotesk',sans-serif;font-size:0.88rem;outline:none;transition:border-color 0.15s;}
+.ck-add-input:focus{border-color:var(--accent);}
+.ck-add-btn{padding:10px 16px;border:none;border-radius:var(--radius-sm);background:var(--accent);color:white;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.82rem;cursor:pointer;white-space:nowrap;}
+.ck-add-btn:hover{background:var(--accent2);}
+.ck-reset-btn{width:100%;padding:10px;border:1px solid var(--border2);border-radius:var(--radius-sm);background:none;color:var(--ink3);font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:0.82rem;cursor:pointer;transition:all 0.15s;}
+.ck-reset-btn:hover{background:var(--surface2);color:var(--ink2);}
+.ck-completed-banner{background:var(--green-dim);border:1px solid var(--green-mid);border-radius:var(--radius-sm);padding:12px 14px;text-align:center;font-size:0.84rem;font-weight:700;color:var(--green);margin-bottom:12px;display:none;}
+
+/* ── EMPLEADOS ── */
+.emp-summary{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px;}
+.emp-stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px 13px;}
+.emp-stat-label{font-size:0.68rem;color:var(--ink3);font-weight:500;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;}
+.emp-stat-val{font-family:var(--mono);font-weight:700;font-size:1.05rem;}
+.emp-stat-val.red{color:var(--red);}
+.emp-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:13px;margin-bottom:8px;animation:fadeUp 0.2s ease;}
+.emp-card-header{display:flex;align-items:center;gap:10px;margin-bottom:6px;}
+.emp-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.88rem;color:white;flex-shrink:0;}
+.emp-info{flex:1;min-width:0;}
+.emp-name{font-weight:600;font-size:0.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.emp-role{font-size:0.71rem;color:var(--ink3);margin-top:1px;}
+.emp-cost{font-family:var(--mono);font-weight:700;font-size:0.9rem;color:var(--red);flex-shrink:0;}
+.emp-del{background:none;border:none;color:var(--ink3);font-size:0.85rem;cursor:pointer;padding:3px;border-radius:5px;flex-shrink:0;}
+.emp-del:hover{color:var(--red);background:var(--red-dim);}
+.emp-tags{display:flex;gap:6px;flex-wrap:wrap;}
+.emp-tag{font-size:0.7rem;padding:2px 8px;border-radius:10px;background:var(--surface2);color:var(--ink3);}
+.emp-tag.fijo{background:var(--blue-dim);color:var(--blue);}
+.emp-tag.variable{background:var(--amber-dim);color:var(--amber);}
+.emp-tag.activo{background:var(--green-dim);color:var(--green);}
+.btn-add-emp{width:100%;padding:13px;border:1.5px dashed var(--blue-mid);border-radius:var(--radius-sm);background:none;color:var(--blue);font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.85rem;cursor:pointer;transition:all 0.15s;margin-bottom:14px;display:flex;align-items:center;justify-content:center;gap:8px;}
+.btn-add-emp:hover{background:var(--blue-dim);}
+.emp-register-btn{width:100%;padding:11px;border:none;border-radius:var(--radius-sm);background:var(--red);color:white;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.88rem;cursor:pointer;transition:background 0.15s;margin-top:10px;}
+.emp-register-btn:hover{background:#dc2626;}
+
+/* ── DEPENDENCIAS ── */
+.dep-section{margin-bottom:18px;}
+.dep-section-title{font-weight:700;font-size:0.88rem;margin-bottom:4px;display:flex;align-items:center;gap:8px;}
+.dep-section-desc{font-size:0.74rem;color:var(--ink3);margin-bottom:12px;line-height:1.5;}
+.dep-threshold-row{display:flex;align-items:center;gap:10px;margin-bottom:14px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px 14px;}
+.dep-threshold-label{flex:1;font-size:0.84rem;color:var(--ink2);font-weight:500;}
+.dep-threshold-wrap{display:flex;align-items:center;gap:4px;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius-sm);padding:6px 10px;}
+.dep-threshold-input{width:50px;text-align:right;border:none;background:none;font-family:var(--mono);font-size:0.92rem;font-weight:700;color:var(--ink);outline:none;}
+.dep-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:13px;margin-bottom:8px;animation:fadeUp 0.2s ease;}
+.dep-card.riesgo{border-left:3px solid var(--red);}
+.dep-card.alerta{border-left:3px solid var(--amber);}
+.dep-card.ok{border-left:3px solid var(--green);}
+.dep-card-header{display:flex;align-items:center;gap:10px;margin-bottom:6px;}
+.dep-icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;background:var(--surface2);flex-shrink:0;}
+.dep-info{flex:1;min-width:0;}
+.dep-name{font-weight:600;font-size:0.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.dep-type{font-size:0.71rem;color:var(--ink3);margin-top:1px;}
+.dep-pct{font-family:var(--mono);font-weight:700;font-size:0.9rem;flex-shrink:0;}
+.dep-pct.riesgo{color:var(--red);}
+.dep-pct.alerta{color:var(--amber);}
+.dep-pct.ok{color:var(--green);}
+.dep-del{background:none;border:none;color:var(--ink3);font-size:0.85rem;cursor:pointer;padding:3px;border-radius:5px;flex-shrink:0;}
+.dep-del:hover{color:var(--red);background:var(--red-dim);}
+.dep-bar-wrap{margin-top:6px;}
+.dep-bar-track{height:5px;background:var(--surface3);border-radius:3px;overflow:hidden;}
+.dep-bar-fill{height:100%;border-radius:3px;transition:width 0.4s;}
+.dep-note{font-size:0.72rem;color:var(--ink3);margin-top:4px;}
+.btn-add-dep{width:100%;padding:11px;border:1.5px dashed var(--border2);border-radius:var(--radius-sm);background:none;color:var(--ink3);font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.84rem;cursor:pointer;transition:all 0.15s;margin-bottom:10px;display:flex;align-items:center;justify-content:center;gap:8px;}
+.btn-add-dep:hover{border-color:var(--accent);color:var(--accent);background:var(--blue-dim);}
 </style>
 </head>
 <body>
@@ -1272,6 +1415,26 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink
   <button class="tab-btn" onclick="switchTab('crm',this)" id="tabCrmBtn">
     <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"><circle cx="4.5" cy="4" r="1.8"/><circle cx="9" cy="4" r="1.8"/><path d="M1 11c0-2 1.5-3.2 3.5-3.2S8 9 8 11"/><path d="M9 7.8c1.5.2 2.5 1.2 2.5 3.2"/></svg>
     Clientes
+  </button>
+  <button class="tab-btn" onclick="switchTab('conciliacion',this)" id="tabConcBtn">
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"><path d="M2 4h9M2 7h6M2 10h4"/><path d="M10 7l1.5 1.5L13 7" stroke-linecap="round"/></svg>
+    Banco
+  </button>
+  <button class="tab-btn" onclick="switchTab('embudo',this)" id="tabEmbudoBtn">
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"><path d="M2 2h9L8 6.5V11L5 9.5V6.5L2 2z"/></svg>
+    Embudo
+  </button>
+  <button class="tab-btn" onclick="switchTab('checklist',this)" id="tabChecklistBtn">
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"><rect x="1" y="1" width="11" height="11" rx="2"/><path d="M4 6.5l2 2 3-3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Checklist
+  </button>
+  <button class="tab-btn" onclick="switchTab('empleados',this)" id="tabEmpleadosBtn">
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"><circle cx="6.5" cy="4" r="2.2"/><path d="M2 12c0-2.5 2-4 4.5-4s4.5 1.5 4.5 4"/></svg>
+    Equipo
+  </button>
+  <button class="tab-btn" onclick="switchTab('dependencias',this)" id="tabDepBtn">
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"><circle cx="6.5" cy="6.5" r="2"/><circle cx="2" cy="3" r="1"/><circle cx="11" cy="3" r="1"/><circle cx="2" cy="10" r="1"/><circle cx="11" cy="10" r="1"/><path d="M3 3.5l2.5 2M10 3.5l-2.5 2M3 9.5l2.5-2M10 9.5l-2.5-2"/></svg>
+    Riesgos
   </button>
 </nav>
 
@@ -2051,6 +2214,178 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink
   </div>
 </div>
 
+<!-- ═══════════ TAB: CONCILIACIÓN ═══════════ -->
+<div class="tab-panel" id="tab-conciliacion">
+
+  <div class="month-strip" style="margin-bottom:14px">
+    <button class="month-arrow" onclick="changeMonth(-1);renderConciliacion()">‹</button>
+    <div class="month-label" id="monthLabelConc">—</div>
+    <button class="month-arrow" onclick="changeMonth(1);renderConciliacion()">›</button>
+  </div>
+
+  <div class="conc-summary">
+    <div class="conc-stat"><div class="conc-stat-label">Conciliados</div><div class="conc-stat-val ok" id="concOk">0</div></div>
+    <div class="conc-stat"><div class="conc-stat-label">Pendientes</div><div class="conc-stat-val warn" id="concPend">0</div></div>
+    <div class="conc-stat"><div class="conc-stat-label">Discrepancias</div><div class="conc-stat-val bad" id="concDisc">0</div></div>
+  </div>
+
+  <div class="conc-filter-row">
+    <button class="filter-btn active" onclick="setConcFilter('todos',this)">Todos</button>
+    <button class="filter-btn" onclick="setConcFilter('pendiente',this)">⏳ Pendientes</button>
+    <button class="filter-btn" onclick="setConcFilter('conciliado',this)">✅ Conciliados</button>
+    <button class="filter-btn" onclick="setConcFilter('discrepancia',this)">🔴 Discrepancias</button>
+  </div>
+
+  <div id="concList"></div>
+
+  <div class="cf-info-pill" style="margin-top:12px">
+    💡 <strong>¿Cómo usarlo?</strong><br>
+    Cada mes revisás tu extracto bancario y marcás cada movimiento como ✅ Conciliado (coincide), ⏳ Pendiente (falta verificar) o 🔴 Discrepancia (no coincide). Así detectás errores o movimientos no registrados.
+  </div>
+</div>
+
+<!-- ═══════════ TAB: EMBUDO ═══════════ -->
+<div class="tab-panel" id="tab-embudo">
+
+  <div class="embudo-card">
+    <div class="embudo-title">📣 Embudo de ventas</div>
+    <div class="embudo-desc">Registrá cuántos contactos tuviste, cuántos cotizaste y cuántos cerraste. Ver tu tasa de conversión te ayuda a saber dónde mejorar.</div>
+
+    <div class="embudo-stages" id="embudoStages"></div>
+
+    <div class="embudo-kpi-grid" id="embudoKpis"></div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:14px">
+      <div class="form-group" style="margin:0">
+        <label class="form-label">Contactos</label>
+        <input class="form-input" id="embContactos" type="number" min="0" step="1" placeholder="0" oninput="renderEmbudo()" style="font-family:var(--mono)">
+      </div>
+      <div class="form-group" style="margin:0">
+        <label class="form-label">Cotizaciones</label>
+        <input class="form-input" id="embCotizaciones" type="number" min="0" step="1" placeholder="0" oninput="renderEmbudo()" style="font-family:var(--mono)">
+      </div>
+      <div class="form-group" style="margin:0">
+        <label class="form-label">Ventas cerradas</label>
+        <input class="form-input" id="embVentas" type="number" min="0" step="1" placeholder="0" oninput="renderEmbudo()" style="font-family:var(--mono)">
+      </div>
+    </div>
+    <button class="pl-register-btn" onclick="guardarEmbudo()">💾 Guardar datos del mes</button>
+  </div>
+
+  <div class="embudo-card">
+    <div class="embudo-title">📅 Historial por mes</div>
+    <div id="embudoHistorial">
+      <div class="empty-state"><div class="ei">📣</div><p>Guardá tu primer mes para ver<br>la evolución de tu embudo.</p></div>
+    </div>
+  </div>
+
+  <div class="cf-info-pill">
+    💡 <strong>Benchmark de referencia:</strong><br>
+    Contacto→Cotización: 30–60% es bueno. Cotización→Venta: 20–40% es saludable. Si cerrás menos del 10%, hay algo que mejorar en tu propuesta.
+  </div>
+</div>
+
+<!-- ═══════════ TAB: CHECKLIST ═══════════ -->
+<div class="tab-panel" id="tab-checklist">
+
+  <div class="ck-template-selector">
+    <button class="ck-tpl-btn active" onclick="setCkTemplate('apertura',this)">🌅 Apertura del día</button>
+    <button class="ck-tpl-btn" onclick="setCkTemplate('cierre_semana',this)">📆 Cierre de semana</button>
+    <button class="ck-tpl-btn" onclick="setCkTemplate('cierre_mes',this)">📅 Cierre de mes</button>
+    <button class="ck-tpl-btn" onclick="setCkTemplate('custom',this)">⚙️ Personalizado</button>
+  </div>
+
+  <div class="ck-completed-banner" id="ckCompletedBanner">🎉 ¡Checklist completado! Buen trabajo.</div>
+
+  <div class="ck-progress-label">
+    <span id="ckProgressText">0 de 0 tareas</span>
+    <span id="ckProgressPct">0%</span>
+  </div>
+  <div class="ck-progress-bar"><div class="ck-progress-fill" id="ckProgressFill" style="width:0%"></div></div>
+
+  <div class="ck-list" id="ckList"></div>
+
+  <div class="ck-add-row">
+    <input class="ck-add-input" id="ckNewTask" type="text" placeholder="Agregar tarea…" maxlength="80" onkeydown="if(event.key==='Enter')addCkTask()">
+    <button class="ck-add-btn" onclick="addCkTask()">＋ Agregar</button>
+  </div>
+  <button class="ck-reset-btn" onclick="resetCkList()">↺ Reiniciar checklist</button>
+
+  <div class="cf-info-pill" style="margin-top:14px">
+    💡 <strong>Tip:</strong><br>
+    Los checklists reducen errores y garantizan que nada importante quede sin hacer. Personalizalos para tu negocio y hacelos parte de tu rutina.
+  </div>
+</div>
+
+<!-- ═══════════ TAB: EMPLEADOS ═══════════ -->
+<div class="tab-panel" id="tab-empleados">
+
+  <div class="emp-summary">
+    <div class="emp-stat"><div class="emp-stat-label">Equipo activo</div><div class="emp-stat-val" id="empTotalActivos">0 personas</div></div>
+    <div class="emp-stat"><div class="emp-stat-label">Costo mensual total</div><div class="emp-stat-val red" id="empCostoTotal">$0</div></div>
+    <div class="emp-stat"><div class="emp-stat-label">Costo fijo</div><div class="emp-stat-val" id="empCostoFijo">$0</div></div>
+    <div class="emp-stat"><div class="emp-stat-label">Costo variable</div><div class="emp-stat-val" id="empCostoVariable">$0</div></div>
+  </div>
+
+  <button class="btn-add-emp" onclick="openEmpModal()">
+    <span style="font-size:1.1rem">＋</span> Agregar empleado / colaborador
+  </button>
+
+  <div id="empList"></div>
+
+  <button class="emp-register-btn" id="empRegisterBtn" onclick="registrarSueldosMes()" style="display:none">
+    💾 Registrar sueldos de este mes como gastos
+  </button>
+
+  <div class="cf-info-pill" style="margin-top:14px">
+    💡 <strong>¿Para qué sirve?</strong><br>
+    Al registrar sueldos como gastos, el DRE muestra el costo real del equipo. El botón "Registrar sueldos" crea las transacciones automáticamente cada mes.
+  </div>
+</div>
+
+<!-- ═══════════ TAB: DEPENDENCIAS ═══════════ -->
+<div class="tab-panel" id="tab-dependencias">
+
+  <div class="dep-threshold-row">
+    <div class="dep-threshold-label">Alertar si dependo más del</div>
+    <div class="dep-threshold-wrap">
+      <input class="dep-threshold-input" id="depThreshold" type="number" min="1" max="100" step="5" value="30" oninput="renderDependencias()">
+      <span style="font-size:0.82rem;color:var(--ink3)">%</span>
+    </div>
+    <span style="font-size:0.75rem;color:var(--ink3);margin-left:6px">de mis ingresos</span>
+  </div>
+
+  <div class="dep-section">
+    <div class="dep-section-title">🏭 Proveedores clave</div>
+    <div class="dep-section-desc">Proveedores de los que dependés para operar. Si uno falla, ¿qué tan grave es?</div>
+    <button class="btn-add-dep" onclick="openDepModal('proveedor')">＋ Agregar proveedor</button>
+    <div id="depProveedoresList"></div>
+  </div>
+
+  <div class="dep-section">
+    <div class="dep-section-title">💻 Plataformas / Herramientas</div>
+    <div class="dep-section-desc">Apps, software o plataformas sin las cuales no podés operar (Mercado Pago, Instagram, etc.).</div>
+    <button class="btn-add-dep" onclick="openDepModal('plataforma')">＋ Agregar plataforma</button>
+    <div id="depPlataformasList"></div>
+  </div>
+
+  <div class="dep-section">
+    <div class="dep-section-title">🧑‍💼 Clientes grandes</div>
+    <div class="dep-section-desc">Clientes que representan una parte importante de tus ingresos. Alta dependencia = alto riesgo.</div>
+    <button class="btn-add-dep" onclick="openDepModal('cliente')">＋ Agregar cliente clave</button>
+    <div id="depClientesList"></div>
+  </div>
+
+  <div id="depAlertBanner" style="display:none" class="be-status danger">
+    🚨 <span id="depAlertText"></span>
+  </div>
+
+  <div class="cf-info-pill" style="margin-top:14px">
+    💡 <strong>Riesgo de concentración:</strong><br>
+    Si un proveedor, plataforma o cliente representa más del 30% de tu operación, tenés un riesgo alto. Diversificar toma tiempo, pero protege tu negocio.
+  </div>
+</div>
+
 </main>
 
 <!-- PIN LOCK SCREEN -->
@@ -2468,6 +2803,89 @@ body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink
     </div>
     <button class="btn-submit inc" id="crmSubmitBtn" onclick="saveCrmClient()">Guardar cliente</button>
     <button class="btn-cancel" onclick="closeCrmModal()">Cancelar</button>
+  </div>
+</div>
+
+<!-- Empleado Modal -->
+<div class="modal-overlay" id="empModal">
+  <div class="modal">
+    <div class="modal-handle"></div>
+    <div class="modal-title" id="empModalTitle">👤 Nuevo empleado</div>
+    <div class="form-group">
+      <label class="form-label">Nombre completo</label>
+      <input class="form-input" id="empNombre" type="text" placeholder="Ej: Lucas Pérez" maxlength="60">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Rol / Puesto</label>
+      <input class="form-input" id="empRol" type="text" placeholder="Ej: Encargado, Vendedor, Diseñador…" maxlength="60">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Tipo de compensación</label>
+      <select class="form-select" id="empTipo">
+        <option value="fijo">Sueldo fijo mensual</option>
+        <option value="variable">Comisión / Variable</option>
+        <option value="mixto">Mixto (fijo + variable)</option>
+        <option value="honorarios">Honorarios / Factura</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Monto fijo ($)</label>
+        <input class="form-input" id="empMonto" type="number" min="0" step="100" placeholder="0" style="font-family:var(--mono)">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Variable estimado ($)</label>
+        <input class="form-input" id="empVariable" type="number" min="0" step="100" placeholder="0" style="font-family:var(--mono)">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Estado</label>
+      <select class="form-select" id="empEstado">
+        <option value="activo">Activo</option>
+        <option value="licencia">En licencia</option>
+        <option value="inactivo">Inactivo / Baja</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Notas (opcional)</label>
+      <input class="form-input" id="empNota" type="text" placeholder="Ej: trabaja lunes a viernes…" maxlength="100">
+    </div>
+    <button class="btn-submit inc" id="empSubmitBtn" onclick="saveEmp()">Guardar</button>
+    <button class="btn-cancel" onclick="closeEmpModal()">Cancelar</button>
+  </div>
+</div>
+
+<!-- Dependencia Modal -->
+<div class="modal-overlay" id="depModal">
+  <div class="modal">
+    <div class="modal-handle"></div>
+    <div class="modal-title" id="depModalTitle">🏭 Nueva dependencia</div>
+    <div class="form-group">
+      <label class="form-label">Nombre</label>
+      <input class="form-input" id="depNombre" type="text" placeholder="Ej: Mercado Pago, Proveedor X…" maxlength="60">
+    </div>
+    <div class="form-group">
+      <label class="form-label">¿Qué representa de tu operación?</label>
+      <div class="form-hint">Estimá el % de tus ingresos o gastos que depende de esto</div>
+      <div style="display:flex;align-items:center;gap:6px">
+        <input class="form-input" id="depPct" type="number" min="0" max="100" step="5" placeholder="0" style="font-family:var(--mono);flex:1">
+        <span style="color:var(--ink3);font-size:0.9rem">%</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Criticidad</label>
+      <select class="form-select" id="depCriticidad">
+        <option value="alta">🔴 Alta — si falla, no puedo operar</option>
+        <option value="media">🟡 Media — afecta bastante pero no paraliza</option>
+        <option value="baja">🟢 Baja — impacto menor, tengo alternativas</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Plan de contingencia (opcional)</label>
+      <input class="form-input" id="depPlan" type="text" placeholder="Ej: tengo proveedor alternativo, puedo migrar a…" maxlength="100">
+    </div>
+    <button class="btn-submit acc" id="depSubmitBtn" onclick="saveDep()">Guardar</button>
+    <button class="btn-cancel" onclick="closeDepModal()">Cancelar</button>
   </div>
 </div>
 
@@ -3149,6 +3567,11 @@ function switchTab(id,btn){
   if(id==='capital')    { renderCapital(); }
   if(id==='cacltv')     { renderCacLtv(); renderCacHistory(); }
   if(id==='crm')        { renderCrm(); }
+  if(id==='conciliacion'){ renderConciliacion(); }
+  if(id==='embudo')     { renderEmbudo(); renderEmbudoHistorial(); }
+  if(id==='checklist')  { renderChecklist(); }
+  if(id==='empleados')  { renderEmpleados(); }
+  if(id==='dependencias'){ renderDependencias(); }
 }
 
 // ═══════════════════════════════════════════
@@ -4801,6 +5224,446 @@ function deleteCrmClient(id){
   setBizData('crmclients', crmClients);
   renderCrm();
   showToast('Cliente eliminado','red');
+}
+
+// ─── CONCILIACIÓN ──────────────────────────
+let concData = getBizData('conciliacion', '{}'); // key: txId → {status, note}
+let concFilter = 'todos';
+
+function renderConciliacion(){
+  // Update month label
+  const lbl = document.getElementById('monthLabelConc');
+  if(lbl) lbl.textContent = MONTHS[currentMonth]+' '+currentYear;
+
+  const monthly = transactions.filter(inCurrentMonth);
+  let ok=0,pend=0,disc=0;
+  monthly.forEach(tx=>{
+    const st = concData[tx.id]?.status || 'pendiente';
+    if(st==='conciliado') ok++;
+    else if(st==='discrepancia') disc++;
+    else pend++;
+  });
+  const okEl=document.getElementById('concOk');
+  const peEl=document.getElementById('concPend');
+  const diEl=document.getElementById('concDisc');
+  if(okEl) okEl.textContent=ok;
+  if(peEl) peEl.textContent=pend;
+  if(diEl) diEl.textContent=disc;
+
+  const listEl = document.getElementById('concList');
+  if(!listEl) return;
+
+  let visible = monthly;
+  if(concFilter!=='todos') visible = monthly.filter(tx=>(concData[tx.id]?.status||'pendiente')===concFilter);
+  visible = [...visible].sort((a,b)=>b.date.localeCompare(a.date));
+
+  if(!visible.length){
+    listEl.innerHTML='<div class="empty-state"><div class="ei">✅</div><p>Sin movimientos para mostrar<br>en este período.</p></div>';
+    return;
+  }
+  listEl.innerHTML = visible.map(tx=>{
+    const st = concData[tx.id]?.status || 'pendiente';
+    const note = concData[tx.id]?.note || '';
+    const isInc = tx.type==='income';
+    const icon = CAT_ICONS[tx.cat]||'📌';
+    const d = new Date(tx.date+'T12:00:00');
+    const ds = d.getDate()+' '+MONTHS[d.getMonth()].slice(0,3);
+    const stLabel = st==='conciliado'?'✅ OK':st==='discrepancia'?'🔴 Disc.':'⏳ Pend.';
+    return `<div class="conc-item ${st}" id="conc-${tx.id}">
+      <div class="conc-item-icon ${isInc?'inc':'exp'}">${icon}</div>
+      <div class="conc-item-info">
+        <div class="conc-item-desc">${escHtml(tx.desc)}</div>
+        <div class="conc-item-meta">${ds} · ${CAT_LABELS[tx.cat]||tx.cat}</div>
+        ${note?`<div class="conc-item-meta" style="color:var(--amber)">📝 ${escHtml(note)}</div>`:''}
+        <input class="conc-note-input" placeholder="Nota (número de operación, comentario…)" value="${escHtml(note)}" onchange="setConcNote('${tx.id}',this.value)" style="display:${note||st==='discrepancia'?'block':'none'}">
+      </div>
+      <div class="conc-item-amount ${isInc?'inc':'exp'}">${isInc?'+':'-'}${fmt(tx.amount)}</div>
+      <button class="conc-status-btn ${st}" onclick="cycleConcStatus('${tx.id}')">${stLabel}</button>
+    </div>`;
+  }).join('');
+}
+
+function cycleConcStatus(txId){
+  const cur = concData[txId]?.status || 'pendiente';
+  const next = cur==='pendiente'?'conciliado':cur==='conciliado'?'discrepancia':'pendiente';
+  if(!concData[txId]) concData[txId]={};
+  concData[txId].status = next;
+  setBizData('conciliacion', concData);
+  renderConciliacion();
+}
+function setConcNote(txId, val){
+  if(!concData[txId]) concData[txId]={};
+  concData[txId].note = val;
+  setBizData('conciliacion', concData);
+}
+function setConcFilter(f, el){
+  concFilter=f;
+  document.querySelectorAll('.conc-filter-row .filter-btn').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');
+  renderConciliacion();
+}
+
+// ─── EMBUDO DE VENTAS ──────────────────────
+let embudoHistory = getBizData('embudo', '[]');
+let embudoConfig  = getBizData('embudoconfig', '{"contactos":0,"cotizaciones":0,"ventas":0}');
+
+function renderEmbudo(){
+  const cont = parseInt(document.getElementById('embContactos')?.value||embudoConfig.contactos||0);
+  const cot  = parseInt(document.getElementById('embCotizaciones')?.value||embudoConfig.cotizaciones||0);
+  const ven  = parseInt(document.getElementById('embVentas')?.value||embudoConfig.ventas||0);
+
+  const maxVal = Math.max(cont,1);
+  const stages = [
+    {label:'📣 Contactos',    count:cont, color:'var(--blue)',  pct:100},
+    {label:'📋 Cotizaciones', count:cot,  color:'var(--amber)', pct:cont>0?(cot/cont*100):0},
+    {label:'🏆 Ventas',       count:ven,  color:'var(--green)', pct:cont>0?(ven/cont*100):0},
+  ];
+
+  const stagesEl = document.getElementById('embudoStages');
+  if(!stagesEl) return;
+  stagesEl.innerHTML = stages.map((s,i)=>{
+    const convEl = i>0 ? (() => {
+      const prev = stages[i-1].count;
+      const rate = prev>0 ? (s.count/prev*100).toFixed(0) : 0;
+      const cls  = rate>=30?'ok':rate>=15?'warn':'bad';
+      return `<div class="embudo-conv"><span class="embudo-conv-arrow">↳</span><span class="embudo-conv-rate ${cls}">${rate}%</span><span> de conversión vs etapa anterior</span></div>`;
+    })() : '';
+    return `${convEl}<div class="embudo-stage">
+      <div class="embudo-stage-header">
+        <span class="embudo-stage-label">${s.label}</span>
+        <span class="embudo-stage-count" style="color:${s.color}">${s.count}</span>
+      </div>
+      <div class="embudo-bar-track">
+        <div class="embudo-bar-fill" style="width:${Math.min(100,s.pct).toFixed(0)}%;background:${s.color}">
+          ${s.count>0?`<span>${s.pct.toFixed(0)}%</span>`:''}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // KPIs
+  const c2c = cot>0&&cont>0 ? (cot/cont*100).toFixed(1)+'%' : '—';
+  const c2v = ven>0&&cot>0  ? (ven/cot*100).toFixed(1)+'%'  : '—';
+  const tot = ven>0&&cont>0 ? (ven/cont*100).toFixed(1)+'%' : '—';
+  const kpiEl = document.getElementById('embudoKpis');
+  if(kpiEl) kpiEl.innerHTML=`
+    <div class="embudo-kpi"><div class="embudo-kpi-label">Contacto → Cotización</div><div class="embudo-kpi-val ${parseFloat(c2c)>=30?'green':parseFloat(c2c)>=15?'amber':'red'}">${c2c}</div></div>
+    <div class="embudo-kpi"><div class="embudo-kpi-label">Cotización → Venta</div><div class="embudo-kpi-val ${parseFloat(c2v)>=30?'green':parseFloat(c2v)>=15?'amber':'red'}">${c2v}</div></div>
+    <div class="embudo-kpi" style="grid-column:1/-1"><div class="embudo-kpi-label">Conversión total (Contacto → Venta)</div><div class="embudo-kpi-val ${parseFloat(tot)>=10?'green':parseFloat(tot)>=5?'amber':'red'}">${tot}</div></div>
+  `;
+
+  // Save config live
+  embudoConfig={contactos:cont,cotizaciones:cot,ventas:ven};
+  setBizData('embudoconfig',embudoConfig);
+}
+
+function guardarEmbudo(){
+  const cont = parseInt(document.getElementById('embContactos')?.value||0);
+  const cot  = parseInt(document.getElementById('embCotizaciones')?.value||0);
+  const ven  = parseInt(document.getElementById('embVentas')?.value||0);
+  if(!cont&&!cot&&!ven){ showToast('⚠️ Ingresá al menos un valor','amber'); return; }
+  const label = MONTHS[currentMonth]+' '+currentYear;
+  const ex = embudoHistory.find(h=>h.month===currentMonth&&h.year===currentYear);
+  if(ex){ Object.assign(ex,{contactos:cont,cotizaciones:cot,ventas:ven}); }
+  else { embudoHistory.push({month:currentMonth,year:currentYear,label,contactos:cont,cotizaciones:cot,ventas:ven}); }
+  setBizData('embudo',embudoHistory);
+  renderEmbudoHistorial();
+  showToast('✅ Embudo guardado','green');
+}
+
+function renderEmbudoHistorial(){
+  const histEl=document.getElementById('embudoHistorial');
+  if(!histEl) return;
+  const hist=[...embudoHistory].sort((a,b)=>b.year-a.year||(b.month-a.month));
+  if(!hist.length){
+    histEl.innerHTML='<div class="empty-state"><div class="ei">📣</div><p>Guardá tu primer mes para ver<br>la evolución de tu embudo.</p></div>';
+    return;
+  }
+  histEl.innerHTML=hist.map(h=>{
+    const conv = h.contactos>0?(h.ventas/h.contactos*100).toFixed(1)+'%':'—';
+    return `<div class="embudo-hist-item">
+      <div class="embudo-hist-header"><span class="embudo-hist-month">${h.label}</span><span class="embudo-hist-conv">${conv} conv. total</span></div>
+      <div class="embudo-hist-row"><span>📣 ${h.contactos} contactos</span><span>📋 ${h.cotizaciones} cotizaciones</span><span>🏆 ${h.ventas} ventas</span></div>
+    </div>`;
+  }).join('');
+}
+
+// ─── CHECKLISTS ────────────────────────────
+const CK_TEMPLATES = {
+  apertura:[
+    'Revisar el saldo en caja chica','Registrar los ingresos del día anterior',
+    'Revisar WhatsApp / mensajes de clientes','Verificar stock de productos críticos',
+    'Confirmar pedidos pendientes para hoy','Activar redes sociales / publicaciones del día',
+    'Revisar agenda / turnos del día'
+  ],
+  cierre_semana:[
+    'Conciliar movimientos de la semana','Revisar cobros pendientes',
+    'Verificar pagos a proveedores próximos','Actualizar stock si manejás inventario',
+    'Revisar métricas de la semana (ventas, visitas)','Registrar gastos de la semana',
+    'Planificar acciones de la próxima semana'
+  ],
+  cierre_mes:[
+    'Cerrar el estado de resultados del mes','Conciliar con extracto bancario',
+    'Registrar pró-labore del mes','Pagar impuestos / obligaciones fiscales',
+    'Revisar métricas: CAC, LTV, conversión','Actualizar metas del mes siguiente',
+    'Backup de datos','Revisar contratos / suscripciones que vencen','Evaluar desempeño del equipo'
+  ],
+  custom:[]
+};
+
+let ckTemplate = 'apertura';
+let ckData     = getBizData('ckdata', '{}'); // key: template → [{text,done,id}]
+
+function setCkTemplate(tpl, el){
+  ckTemplate = tpl;
+  document.querySelectorAll('.ck-tpl-btn').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');
+  renderChecklist();
+}
+
+function renderChecklist(){
+  if(!ckData[ckTemplate]){
+    ckData[ckTemplate] = (CK_TEMPLATES[ckTemplate]||[]).map((text,i)=>({id:'ck_'+ckTemplate+'_'+i,text,done:false}));
+    setBizData('ckdata',ckData);
+  }
+  const items = ckData[ckTemplate];
+  const done  = items.filter(i=>i.done).length;
+  const total = items.length;
+  const pct   = total>0?(done/total*100).toFixed(0):0;
+
+  const progText=document.getElementById('ckProgressText');
+  const progPct =document.getElementById('ckProgressPct');
+  const progFill=document.getElementById('ckProgressFill');
+  const banner  =document.getElementById('ckCompletedBanner');
+  if(progText) progText.textContent=`${done} de ${total} tareas`;
+  if(progPct)  progPct.textContent=pct+'%';
+  if(progFill) progFill.style.width=pct+'%';
+  if(banner) banner.style.display = (total>0&&done===total)?'block':'none';
+
+  const listEl=document.getElementById('ckList');
+  if(!listEl) return;
+  if(!items.length){
+    listEl.innerHTML='<div class="empty-state"><div class="ei">✅</div><p>No hay tareas aún.<br>Agregá la primera arriba.</p></div>';
+    return;
+  }
+  listEl.innerHTML=items.map(item=>`
+    <div class="ck-item${item.done?' done':''}" id="ckitem-${item.id}">
+      <button class="ck-check${item.done?' checked':''}" onclick="toggleCkItem('${item.id}')">${item.done?'✓':''}</button>
+      <span class="ck-item-text">${escHtml(item.text)}</span>
+      <button class="ck-item-del" onclick="deleteCkItem('${item.id}')">✕</button>
+    </div>
+  `).join('');
+}
+
+function toggleCkItem(id){
+  const item = ckData[ckTemplate]?.find(i=>i.id===id);
+  if(item){ item.done=!item.done; setBizData('ckdata',ckData); renderChecklist(); }
+}
+function deleteCkItem(id){
+  if(ckData[ckTemplate]) ckData[ckTemplate]=ckData[ckTemplate].filter(i=>i.id!==id);
+  setBizData('ckdata',ckData); renderChecklist();
+}
+function addCkTask(){
+  const inp=document.getElementById('ckNewTask');
+  const text=(inp?.value||'').trim();
+  if(!text){ shakEl(inp); return; }
+  if(!ckData[ckTemplate]) ckData[ckTemplate]=[];
+  ckData[ckTemplate].push({id:'ck_'+Date.now(),text,done:false});
+  setBizData('ckdata',ckData);
+  inp.value='';
+  renderChecklist();
+}
+function resetCkList(){
+  if(!ckData[ckTemplate]) return;
+  ckData[ckTemplate].forEach(i=>i.done=false);
+  setBizData('ckdata',ckData); renderChecklist();
+  showToast('↺ Checklist reiniciado','amber');
+}
+
+// ─── EMPLEADOS ─────────────────────────────
+let empleados = getBizData('empleados', '[]');
+let editingEmpId = null;
+
+function renderEmpleados(){
+  const activos   = empleados.filter(e=>e.estado==='activo');
+  const costoTotal= empleados.filter(e=>e.estado==='activo').reduce((s,e)=>(s+e.monto+(e.variable||0)),0);
+  const costoFijo = empleados.filter(e=>e.estado==='activo').reduce((s,e)=>s+e.monto,0);
+  const costoVar  = empleados.filter(e=>e.estado==='activo').reduce((s,e)=>s+(e.variable||0),0);
+
+  const el=(id,v)=>{ const x=document.getElementById(id); if(x) x.textContent=v; };
+  el('empTotalActivos', activos.length+' persona'+(activos.length!==1?'s':''));
+  el('empCostoTotal', fmt(costoTotal));
+  el('empCostoFijo', fmt(costoFijo));
+  el('empCostoVariable', fmt(costoVar));
+
+  const listEl=document.getElementById('empList');
+  if(!listEl) return;
+
+  const regBtn=document.getElementById('empRegisterBtn');
+  if(regBtn) regBtn.style.display = activos.length>0?'block':'none';
+
+  if(!empleados.length){
+    listEl.innerHTML='<div class="empty-state"><div class="ei">👥</div><p>Aún no agregaste empleados.<br>Usá el botón de arriba para empezar.</p></div>';
+    return;
+  }
+  listEl.innerHTML=empleados.map(e=>{
+    const initials = e.nombre.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
+    const total = e.monto+(e.variable||0);
+    return `<div class="emp-card">
+      <div class="emp-card-header">
+        <div class="emp-avatar">${initials}</div>
+        <div class="emp-info">
+          <div class="emp-name">${escHtml(e.nombre)}</div>
+          <div class="emp-role">${escHtml(e.rol)}</div>
+        </div>
+        <div class="emp-cost">${fmt(total)}/mes</div>
+        <button class="emp-del" onclick="deleteEmp('${e.id}')">✕</button>
+      </div>
+      <div class="emp-tags">
+        <span class="emp-tag ${e.tipo}">${e.tipo==='fijo'?'💙 Fijo':e.tipo==='variable'?'🟡 Variable':e.tipo==='mixto'?'🔀 Mixto':'📄 Honorarios'}</span>
+        <span class="emp-tag ${e.estado==='activo'?'activo':''}">${e.estado==='activo'?'✅ Activo':e.estado==='licencia'?'⏸ Licencia':'❌ Baja'}</span>
+        ${e.nota?`<span class="emp-tag">${escHtml(e.nota)}</span>`:''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function openEmpModal(id){
+  editingEmpId=id||null;
+  const emp=id?empleados.find(e=>e.id===id):null;
+  document.getElementById('empModalTitle').textContent = emp?'✏️ Editar empleado':'👤 Nuevo empleado';
+  document.getElementById('empNombre').value  = emp?.nombre||'';
+  document.getElementById('empRol').value     = emp?.rol||'';
+  document.getElementById('empTipo').value    = emp?.tipo||'fijo';
+  document.getElementById('empMonto').value   = emp?.monto||'';
+  document.getElementById('empVariable').value= emp?.variable||'';
+  document.getElementById('empEstado').value  = emp?.estado||'activo';
+  document.getElementById('empNota').value    = emp?.nota||'';
+  document.getElementById('empModal').classList.add('open');
+}
+function closeEmpModal(){ document.getElementById('empModal').classList.remove('open'); editingEmpId=null; }
+function saveEmp(){
+  const nombre  = document.getElementById('empNombre').value.trim();
+  const rol     = document.getElementById('empRol').value.trim();
+  const tipo    = document.getElementById('empTipo').value;
+  const monto   = parseFloat(document.getElementById('empMonto').value||0);
+  const variable= parseFloat(document.getElementById('empVariable').value||0);
+  const estado  = document.getElementById('empEstado').value;
+  const nota    = document.getElementById('empNota').value.trim();
+  if(!nombre){ shakEl(document.getElementById('empNombre')); return; }
+  if(editingEmpId){
+    const ex=empleados.find(e=>e.id===editingEmpId);
+    if(ex) Object.assign(ex,{nombre,rol,tipo,monto,variable,estado,nota});
+  } else {
+    empleados.push({id:'emp_'+Date.now(),nombre,rol,tipo,monto,variable,estado,nota});
+  }
+  setBizData('empleados',empleados);
+  closeEmpModal(); renderEmpleados();
+  showToast('✅ Empleado guardado','green');
+}
+function deleteEmp(id){
+  if(!confirm('¿Eliminar este empleado?')) return;
+  empleados=empleados.filter(e=>e.id!==id);
+  setBizData('empleados',empleados); renderEmpleados();
+  showToast('Empleado eliminado','red');
+}
+function registrarSueldosMes(){
+  const activos=empleados.filter(e=>e.estado==='activo');
+  if(!activos.length){ showToast('No hay empleados activos','amber'); return; }
+  const label = MONTHS[currentMonth]+' '+currentYear;
+  const today = toDateInput(new Date());
+  activos.forEach(e=>{
+    const total=e.monto+(e.variable||0);
+    const tx={id:'emp_'+e.id+'_'+Date.now(),type:'expense',desc:'Sueldo '+e.nombre+' – '+label,amount:total,cat:'sueldos',date:today};
+    transactions.unshift(tx);
+  });
+  save(); render();
+  showToast('✅ Sueldos registrados como gastos','green');
+}
+
+// ─── DEPENDENCIAS CRÍTICAS ─────────────────
+let dependencias = getBizData('dependencias', '[]');
+let depTipoActual = 'proveedor';
+let editingDepId  = null;
+
+function renderDependencias(){
+  const threshold = parseFloat(document.getElementById('depThreshold')?.value||30);
+  let alertas = [];
+
+  ['proveedor','plataforma','cliente'].forEach(tipo=>{
+    const listId = tipo==='proveedor'?'depProveedoresList':tipo==='plataforma'?'depPlataformasList':'depClientesList';
+    const listEl = document.getElementById(listId);
+    if(!listEl) return;
+    const items = dependencias.filter(d=>d.tipo===tipo);
+    if(!items.length){
+      listEl.innerHTML='<div style="color:var(--ink3);font-size:0.82rem;padding:8px 0;text-align:center">Sin registros aún.</div>';
+      return;
+    }
+    listEl.innerHTML = items.map(d=>{
+      const isRisk = d.pct >= threshold;
+      const isWarn = d.pct >= threshold*0.7 && !isRisk;
+      const cls    = isRisk?'riesgo':isWarn?'alerta':'ok';
+      const pctCls = isRisk?'riesgo':isWarn?'alerta':'ok';
+      const fillColor = isRisk?'var(--red)':isWarn?'var(--amber)':'var(--green)';
+      if(isRisk) alertas.push(`${d.nombre} (${d.pct}%)`);
+      return `<div class="dep-card ${cls}">
+        <div class="dep-card-header">
+          <div class="dep-icon">${tipo==='proveedor'?'🏭':tipo==='plataforma'?'💻':'🧑‍💼'}</div>
+          <div class="dep-info">
+            <div class="dep-name">${escHtml(d.nombre)}</div>
+            <div class="dep-type">${d.criticidad==='alta'?'🔴 Crítica':d.criticidad==='media'?'🟡 Media':'🟢 Baja'}</div>
+          </div>
+          <div class="dep-pct ${pctCls}">${d.pct}%</div>
+          <button class="dep-del" onclick="deleteDep('${d.id}')">✕</button>
+        </div>
+        <div class="dep-bar-wrap">
+          <div class="dep-bar-track"><div class="dep-bar-fill" style="width:${Math.min(100,d.pct)}%;background:${fillColor}"></div></div>
+        </div>
+        ${d.plan?`<div class="dep-note">📋 Plan: ${escHtml(d.plan)}</div>`:''}
+      </div>`;
+    }).join('');
+  });
+
+  const alertBanner=document.getElementById('depAlertBanner');
+  const alertText=document.getElementById('depAlertText');
+  if(alertBanner){
+    if(alertas.length){
+      alertBanner.style.display='block';
+      alertText.textContent=`Concentración de riesgo alta: ${alertas.join(', ')} supera el ${threshold}%`;
+    } else {
+      alertBanner.style.display='none';
+    }
+  }
+}
+
+function openDepModal(tipo){
+  depTipoActual=tipo;
+  editingDepId=null;
+  const titles={proveedor:'🏭 Nuevo proveedor clave',plataforma:'💻 Nueva plataforma',cliente:'🧑‍💼 Nuevo cliente clave'};
+  document.getElementById('depModalTitle').textContent=titles[tipo]||'Nueva dependencia';
+  document.getElementById('depNombre').value='';
+  document.getElementById('depPct').value='';
+  document.getElementById('depCriticidad').value='alta';
+  document.getElementById('depPlan').value='';
+  document.getElementById('depModal').classList.add('open');
+}
+function closeDepModal(){ document.getElementById('depModal').classList.remove('open'); editingDepId=null; }
+function saveDep(){
+  const nombre     = document.getElementById('depNombre').value.trim();
+  const pct        = parseFloat(document.getElementById('depPct').value||0);
+  const criticidad = document.getElementById('depCriticidad').value;
+  const plan       = document.getElementById('depPlan').value.trim();
+  if(!nombre){ shakEl(document.getElementById('depNombre')); return; }
+  dependencias.push({id:'dep_'+Date.now(),tipo:depTipoActual,nombre,pct,criticidad,plan});
+  setBizData('dependencias',dependencias);
+  closeDepModal(); renderDependencias();
+  showToast('✅ Dependencia registrada','green');
+}
+function deleteDep(id){
+  if(!confirm('¿Eliminar esta dependencia?')) return;
+  dependencias=dependencias.filter(d=>d.id!==id);
+  setBizData('dependencias',dependencias); renderDependencias();
+  showToast('Eliminado','red');
 }
 
 init();
